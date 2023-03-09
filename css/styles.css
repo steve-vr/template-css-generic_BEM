@@ -1,0 +1,62 @@
+:root {
+  --header-bg: #1a232c;
+  --main-bg: #22292f;
+  --border-rds: 0.25rem;
+  --header-data-down-bg: #39454e;
+  --scroll-c: #4b595d;
+  --scroll-bg: #313131;
+  --effect-hover: brightness(.9);
+  --effect-disabled: brightness(.7);
+  --p-container: 0.5rem;
+}
+
+select:hover {
+  filter: var(--effect-hover);
+}
+
+:focus, :focus-visible {
+  outline: 0 !important;
+}
+
+:disabled, .disabled {
+  filter: var(--effect-disabled);
+}
+:disabled:hover, .disabled:hover {
+  filter: var(--effect-disabled) !important;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+input[type=date] {
+  min-width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%);
+}
+
+@media (min-width: 1200px) {
+  input[type=date]::-webkit-calendar-picker-indicator {
+    background: 0 0;
+  }
+  input[type=date]:before {
+    font-family: "font awesome 5 free";
+    content: "\f133";
+    position: absolute;
+    right: 0.5rem;
+    color: #999;
+  }
+}
+p {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
