@@ -1,0 +1,148 @@
+%f{ 
+    display: flex;
+    &-aic{
+        @extend %f;
+        align-items: center;
+        &__c{
+            @extend %f-aic;
+            justify-content: center;
+        }
+        &__f-s{
+            @extend %f-aic;
+            justify-content: start;
+        }
+        &__f-e{
+            @extend %f-aic;
+            justify-content: end;
+        }
+        &__s-b{
+            @extend %f-aic;
+            justify-content: space-between;
+        }
+        &__s-a{
+            @extend %f-aic;
+            justify-content: space-around;
+        }
+        &__s-e{
+            @extend %f-aic;
+            justify-content: space-evenly;
+        }
+    }
+    &-aib{
+        @extend %f;
+        align-items: baseline;
+        &__c{
+            @extend %f-aib;
+            justify-content: center;
+        }
+        &__f-s{
+            @extend %f-aib;
+            justify-content: start;
+        }
+        &__f-e{
+            @extend %f-aib;
+            justify-content: end;
+        }
+        &__s-b{
+            @extend %f-aib;
+            justify-content: space-between;
+        }
+        &__s-a{
+            @extend %f-aib;
+            justify-content: space-around;
+        }
+        &__s-e{
+            @extend %f-aib;
+            justify-content: space-evenly;
+        }
+
+    }
+    &-aifs{
+        @extend %f;
+        align-items: flex-start;
+        &__c{
+            @extend %f-aifs;
+            justify-content: center;
+        }
+        &__f-s{
+            @extend %f-aifs;
+            justify-content: start;
+        }
+        &__f-e{
+            @extend %f-aifs;
+            justify-content: end;
+        }
+        &__s-b{
+            @extend %f-aifs;
+            justify-content: space-between;
+        }
+        &__s-a{
+            @extend %f-aifs;
+            justify-content: space-around;
+        }
+        &__s-e{
+            @extend %f-aifs;
+            justify-content: space-evenly;
+        }
+
+    }
+    &-aife{
+        @extend %f;
+        align-items: flex-end;
+        &__c{
+            @extend %f-aife;
+            justify-content: center;
+        }
+        &__f-s{
+            @extend %f-aife;
+            justify-content: start;
+        }
+        &__f-e{
+            @extend %f-aife;
+            justify-content: end;
+        }
+        &__s-b{
+            @extend %f-aife;
+            justify-content: space-between;
+        }
+        &__s-a{
+            @extend %f-aife;
+            justify-content: space-around;
+        }
+        &__s-e{
+            @extend %f-aife;
+            justify-content: space-evenly;
+        }
+
+    }
+}
+
+%hover{
+    &:hover{
+        filter: var(--effect-hover);
+    }
+}
+
+%btn{
+    @extend %hover;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-radius: var(--border-rds);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+select{
+    @extend %btn;
+    border-color: #000;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23#{$color-icon-selector}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 14px 14px; 
+    -webkit-appearance: none; // Quita la apariencia predeterminada en Safari 
+    -moz-appearance: none; //  Quita la apariencia predeterminada en Firefox 
+    appearance: none; //  Quita la apariencia predeterminada en otros navegadores
+
+}
+

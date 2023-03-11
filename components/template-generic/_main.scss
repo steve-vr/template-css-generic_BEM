@@ -1,0 +1,51 @@
+//recuerda que no lo puedes colocar directamente en body ya que si son integraciones dentro de otro sistemas , puedes alterar el css que ya tenia
+.xd{
+    background-color: grey;
+    //font-family: var(--font);
+    //font-size: var(--txt-size);
+    .btn{
+        @extend %btn;
+        &.border{
+           border-color: #f36d33;
+           background: #fff;
+        }
+        &.singup{
+            background-color: green;
+        }
+        &.reset{
+            background-color: aquamarine;
+        }
+        &.send{
+            background-color: #f36d33;
+        }
+    }
+    .group{
+        &__flex{
+            display: flex;
+            gap: 0.5rem;
+            &--resize{
+                @extend .group__flex;
+                .btn{
+                    width: 25%;
+                }
+                &.rem{
+                    .btn{
+                        width: 7rem;
+                    }
+                }
+            }
+        }
+        &__grid{
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: repeat(3,auto);
+            &--resize{
+                @extend .group__grid;
+                grid-template-columns: repeat(3,25%);
+            }
+        }
+    }
+    
+}
+
+

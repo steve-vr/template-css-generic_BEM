@@ -1,0 +1,22 @@
+{
+  "name": "template-css-generic_bem",
+  "version": "1.0.0",
+  "description": "Development of multifunctional css with methodology BEM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve-vr/template-css-generic_BEM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steve-vr/template-css-generic_BEM/issues"
+  },
+  "homepage": "https://github.com/steve-vr/template-css-generic_BEM#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

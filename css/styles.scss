@@ -1,17 +1,29 @@
+@import '../components/variables';
+
 :root{
-    --header-bg: #1a232c;
-    --main-bg: #22292f;
     --border-rds: 0.25rem;
-    --header-data-down-bg: #39454e;
-    --scroll-c: #4b595d;
-    --scroll-bg : #313131;
-    --effect-hover : brightness(.9);
-    --effect-disabled : brightness(.7);
-    --p-container: 0.5rem;
+    --effect-hover : #{$g-hover};
+    --effect-disabled :#{$g-disabled};
+
+    //--header-bg: #1a232c;
+    //--main-bg: #22292f;
+    //--header-data-down-bg: #39454e;
+    //--scroll-c: #4b595d;
+    //--scroll-bg : #313131;
+    //--p-container: 0.5rem;
+    
 }   
-$size-web: 1200px;
+$color-icon-selector: '000';
+
+
 $form-height: 2.6rem;
 $p-container: 0.5rem;
 
-@import '../components/generic-scss';
-@import '../components/bootstrap-change';
+
+@import '../components/global';
+@import '../components/placeholder-selectors';
+//@import '../components/template-generic/main';
+@import '../components/template-generic/ex-coliseosport';
+
+
+

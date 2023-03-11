@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#{$body}{
+    color: $g-color;
+    font-family: $g-font;
+    font-size: $g-font-size;
+    background-color: $bgc-body;
+    .header{
+        background-color: $bgc-header;
+    }
+}
+
+
+#{$body},body,p,ul{
+    margin: 0;
+}
+/*h6, h5, h4, h3, h2, h1{
+    margin: 0;
+    font-weight: 500;
+}*/
+button, select{
+    font-size: inherit;
+}
+
+// a, link, input, button, select, textarea e iframe.
+:focus, :focus-visible{
+    outline: 0 !important;
+}
+// input, select, button ; en caso sean bg claros o oscuros cambiar el color que tiene el disabled
+:disabled, .disabled{
+    filter: var(--effect-disabled);
+    &:hover{
+        filter: var(--effect-disabled);
+    }
+}
+// para cualquier elemento, evita el evento click
+.disabled{
+    pointer-events: none;
+
+}
+
+.btn{
+    @extend %btn;
+}
+
+
+
+input[type=date] {
+    min-width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative
+}
+  
+input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%)
+}
+
+
+@media (min-width: $size-web) {
+    input[type=date]::-webkit-calendar-picker-indicator {
+        background:0 0
+    }
+  
+    input[type=date]:before {
+        font-family: "font awesome 5 free";
+        content: "\f133";
+        position: absolute;
+        right: .5rem;
+        color: #999
+    }
+}

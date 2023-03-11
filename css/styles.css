@@ -1,17 +1,35 @@
 :root {
-  --header-bg: #1a232c;
-  --main-bg: #22292f;
   --border-rds: 0.25rem;
-  --header-data-down-bg: #39454e;
-  --scroll-c: #4b595d;
-  --scroll-bg: #313131;
-  --effect-hover: brightness(.9);
-  --effect-disabled: brightness(.7);
-  --p-container: 0.5rem;
+  --effect-hover: brightness(0.9);
+  --effect-disabled:brightness(0.7);
 }
 
-select:hover {
-  filter: var(--effect-hover);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.nix-body {
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  background-color: #313233;
+}
+.nix-body .header {
+  background-color: #000;
+}
+
+.nix-body, body, p, ul {
+  margin: 0;
+}
+
+/*h6, h5, h4, h3, h2, h1{
+    margin: 0;
+    font-weight: 500;
+}*/
+button, select {
+  font-size: inherit;
 }
 
 :focus, :focus-visible {
@@ -22,15 +40,11 @@ select:hover {
   filter: var(--effect-disabled);
 }
 :disabled:hover, .disabled:hover {
-  filter: var(--effect-disabled) !important;
+  filter: var(--effect-disabled);
 }
 
 .disabled {
   pointer-events: none;
-}
-
-select {
-  cursor: pointer;
 }
 
 input[type=date] {
@@ -57,6 +71,54 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: #999;
   }
 }
-p {
-  margin: 0;
+.nix-body .ex__h-content, .nix-body .header {
+  display: flex;
+}
+.nix-body .header {
+  align-items: center;
+}
+.nix-body .header {
+  justify-content: space-between;
+}
+select:hover, .btn:hover {
+  filter: var(--effect-hover);
+}
+
+select, .btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  background-color: #fff;
+  border-radius: var(--border-rds);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+select {
+  border-color: #000;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.nix-body .header {
+  height: 4rem;
+  padding: 0 0.5rem;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .nix-body .header img {
+    width: 7rem;
+  }
+}
+.nix-body .ex__h-content {
+  gap: 0.25rem;
+  width: 14rem;
+}
+.nix-body .btn.login {
+  background-color: #f54b00;
 }/*# sourceMappingURL=styles.css.map */
