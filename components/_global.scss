@@ -49,29 +49,29 @@ button, select{
 
 
 
-input[type=date] {
-    min-width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    position: relative
-}
-  
-input[type=date]::-webkit-calendar-picker-indicator {
-  filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%)
-}
-
-
-@media (min-width: $size-web) {
-    input[type=date]::-webkit-calendar-picker-indicator {
-        background:0 0
-    }
-  
-    input[type=date]:before {
-        font-family: "font awesome 5 free";
-        content: "\f133";
-        position: absolute;
-        right: .5rem;
-        color: #999
-    }
-}
+//input[type=date] {
+//    min-width: 100%;
+//    -webkit-appearance: none;
+//    -moz-appearance: none;
+//    appearance: none;
+//    position: relative
+//}
+//  
+//input[type=date]::-webkit-calendar-picker-indicator {
+//  filter: invert(68%) sepia(11%) saturate(12%) hue-rotate(322deg) brightness(87%) contrast(91%)
+//}
+//
+//
+//@media (min-width: $size-web) {
+//    input[type=date]::-webkit-calendar-picker-indicator {
+//        background:0 0
+//    }
+//  
+//    input[type=date]:before {
+//        font-family: "font awesome 5 free";
+//        content: "\f133";
+//        position: absolute;
+//        right: .5rem;
+//        color: #999
+//    }
+//}
