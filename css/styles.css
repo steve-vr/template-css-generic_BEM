@@ -1,7 +1,16 @@
-:root {
-  --border-rds: 0.25rem;
-  --effect-hover: brightness(0.9);
-  --effect-disabled:brightness(0.7);
+.globalcss .btn:hover {
+  filter: brightness(0.9);
+}
+
+.globalcss .btn {
+  cursor: pointer;
+  font-size: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  background-color: #7e7e7e;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 *,
@@ -10,17 +19,25 @@
   box-sizing: border-box;
 }
 
-.nix-body {
-  color: #fff;
+.globalcss {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
-  background-color: #313233;
-}
-.nix-body .header {
   background-color: #000;
 }
+.globalcss * {
+  color: #fff;
+}
+.globalcss :focus, .globalcss :focus-visible {
+  outline: 0;
+}
+.globalcss :disabled {
+  filter: brightness(0.7);
+}
+.globalcss :disabled:hover {
+  filter: brightness(0.7);
+}
 
-.nix-body, body, p, ul {
+.globalcss, body, p, ul {
   margin: 0;
 }
 
@@ -28,73 +45,34 @@
     margin: 0;
     font-weight: 500;
 }*/
-button, select {
-  font-size: inherit;
+.globalcss .btn.border {
+  border-color: #f36d33;
+  background: #edb8a1;
 }
-
-:focus, :focus-visible {
-  outline: 0 !important;
+.globalcss .btn.singup {
+  background-color: green;
 }
-
-:disabled, .disabled {
-  filter: var(--effect-disabled);
+.globalcss .btn.reset {
+  background-color: rgb(62, 0, 207);
 }
-:disabled:hover, .disabled:hover {
-  filter: var(--effect-disabled);
+.globalcss .btn.send {
+  background-color: #f36d33;
 }
-
-.disabled {
-  pointer-events: none;
-}
-
-.nix-body .ex__h-content, .nix-body .header {
+.globalcss .group__flex, .globalcss .group__flex--resize {
   display: flex;
-}
-.nix-body .header {
-  align-items: center;
-}
-.nix-body .header {
-  justify-content: space-between;
-}
-select:hover, .btn:hover {
-  filter: var(--effect-hover);
-}
-
-select, .btn {
-  cursor: pointer;
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid transparent;
-  background-color: #fff;
-  border-radius: var(--border-rds);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-select {
-  border-color: #000;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 14px 14px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.nix-body .header {
-  height: 4rem;
-  padding: 0 0.5rem;
   gap: 0.5rem;
 }
-@media screen and (max-width: 1200px) {
-  .nix-body .header img {
-    width: 7rem;
-  }
+.globalcss .group__flex--resize .btn {
+  width: 25%;
 }
-.nix-body .ex__h-content {
-  gap: 0.25rem;
-  width: 14rem;
+.globalcss .group__flex--resize.rem .btn {
+  width: 7rem;
 }
-.nix-body .btn.login {
-  background-color: #f54b00;
+.globalcss .group__grid, .globalcss .group__grid--resize {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, auto);
+}
+.globalcss .group__grid--resize {
+  grid-template-columns: repeat(3, 25%);
 }/*# sourceMappingURL=styles.css.map */

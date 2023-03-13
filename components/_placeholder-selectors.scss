@@ -119,30 +119,31 @@
 
 %hover{
     &:hover{
-        filter: var(--effect-hover);
+        filter: #{$g-hover};
     }
 }
 
 %btn{
     @extend %hover;
     cursor: pointer;
+    font-size: inherit;
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid transparent;
-    background-color: #fff;
-    border-radius: var(--border-rds);
+    border: #{$border-btn};
+    background-color: #{$bgc-btn};
+    border-radius: #{$borderR-btn};
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-select{
-    @extend %btn;
-    border-color: #000;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23#{$color-icon-selector}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    background-size: 14px 14px; 
-    -webkit-appearance: none; // Quita la apariencia predeterminada en Safari 
-    -moz-appearance: none; //  Quita la apariencia predeterminada en Firefox 
-    appearance: none; //  Quita la apariencia predeterminada en otros navegadores
-
-}
-
+//select{
+//    @extend %btn;
+//    border-color: #000;
+//    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23#{$color-icon-selector}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+//    background-repeat: no-repeat;
+//    background-position: right 0.5rem center;
+//    background-size: 14px 14px; 
+//    -webkit-appearance: none; // Quita la apariencia predeterminada en Safari 
+//    -moz-appearance: none; //  Quita la apariencia predeterminada en Firefox 
+//    appearance: none; //  Quita la apariencia predeterminada en otros navegadores
+//
+//}
+//

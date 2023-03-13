@@ -5,13 +5,30 @@
 }
 
 #{$body}{
-    color: $g-color;
+    *{
+     color: $g-color;
+    }
     font-family: $g-font;
     font-size: $g-font-size;
     background-color: $bgc-body;
-    .header{
-        background-color: $bgc-header;
+
+    .btn{
+        @extend %btn;
     }
+    // a, link, input, button, select, textarea e iframe.
+    :focus, :focus-visible{
+        outline: 0;
+    }
+    :disabled{
+        filter: #{$g-disabled};
+        &:hover{
+            filter: #{$g-disabled};
+        }
+    }
+
+        //.header{
+    //    background-color: $bgc-header;
+    //}
 }
 
 
@@ -22,30 +39,21 @@
     margin: 0;
     font-weight: 500;
 }*/
-button, select{
-    font-size: inherit;
-}
 
-// a, link, input, button, select, textarea e iframe.
-:focus, :focus-visible{
-    outline: 0 !important;
-}
+
+//select{
+//    font-size: inherit;
+//}
+
 // input, select, button ; en caso sean bg claros o oscuros cambiar el color que tiene el disabled
-:disabled, .disabled{
-    filter: var(--effect-disabled);
-    &:hover{
-        filter: var(--effect-disabled);
-    }
-}
+
 // para cualquier elemento, evita el evento click
-.disabled{
-    pointer-events: none;
+//.disabled{
+//    pointer-events: none;
+//
+//}
 
-}
 
-.btn{
-    @extend %btn;
-}
 
 
 

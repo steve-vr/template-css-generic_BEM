@@ -1,12 +1,19 @@
-$body  : ".nix-body"; // recuerda que para EVITAR cruze de css cuando se integra "X" pagina con otra, colocar el contenedor global del proyecto ayuda a prevenir esto
+$body  : ".globalcss"; //nombre de la pagina
 //$theme : "dark";// them coliseosport, theme jetbet, theme-dark01 
-$page : "colisesport";
+$page : "default-dark";//default-light || default-dark
 //g = global
 //bgc = background-color
-$g-color       : null;
-$color-primary : null;
 $bgc-body      : null;
 $bgc-header    : null;
+
+$g-color       : null;
+$color-primary : null;
+
+$bgc-btn       : null;
+$border-btn    : null;
+$borderR-btn   : 0.25rem;
+
+
 $g-font        : system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $g-font-size   : 14px;
 $g-hover       : brightness(.9);
@@ -15,9 +22,28 @@ $size-web      : 1200px;
 
 //@if($theme == "light" and $g-color == null){
 //    $g-color : #000;
-//} @else if($theme == "dark" and $g-color == null){
+//} @else if($theme == "dark" and $g-color == null){1px solid
 //    $g-color : #fff;
 //}
+@if($page == "default-light"){
+    $bgc-body   :#fff;
+    $bgc-btn    : #fff;
+    $g-color    : #000;
+    $border-btn : 1px solid #000;
+    //$color-primary : #f54b00;
+    //$bgc-body :#1c2226;
+    //$bgc-header : #000;
+}
+@if($page == "default-dark"){
+    $bgc-body   :#000;
+    $g-color    : #fff;
+    $bgc-btn    : #7e7e7e;
+    $border-btn : 1px solid transparent;
+    //$color-primary : #f54b00;
+    //$bgc-body :#1c2226;
+    //$bgc-header : #000;
+}
+
 @if($page == "colisesport"){
     $g-color : #fff;
     $color-primary : #f54b00;

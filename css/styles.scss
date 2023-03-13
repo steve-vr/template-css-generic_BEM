@@ -1,9 +1,7 @@
 @import '../components/variables';
 
 :root{
-    --border-rds: 0.25rem;
-    --effect-hover : #{$g-hover};
-    --effect-disabled :#{$g-disabled};
+ 
 
     //--header-bg: #1a232c;
     //--main-bg: #22292f;
@@ -20,10 +18,11 @@ $form-height: 2.6rem;
 $p-container: 0.5rem;
 
 
-@import '../components/global';
 @import '../components/placeholder-selectors';
-//@import '../components/template-generic/main';
-@import '../components/template-generic/ex-coliseosport';
+@import '../components/global';
+
+@import '../components/template-generic/main';
+//@import '../components/template-generic/ex-coliseosport';
 
 
 

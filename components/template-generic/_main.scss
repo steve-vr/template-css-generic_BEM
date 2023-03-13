@@ -1,19 +1,18 @@
 //recuerda que no lo puedes colocar directamente en body ya que si son integraciones dentro de otro sistemas , puedes alterar el css que ya tenia
-.xd{
-    background-color: grey;
+#{$body}{
     //font-family: var(--font);
     //font-size: var(--txt-size);
     .btn{
         @extend %btn;
         &.border{
            border-color: #f36d33;
-           background: #fff;
+           background: #edb8a1;
         }
         &.singup{
             background-color: green;
         }
         &.reset{
-            background-color: aquamarine;
+            background-color: rgb(62, 0, 207);
         }
         &.send{
             background-color: #f36d33;
