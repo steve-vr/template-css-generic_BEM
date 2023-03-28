@@ -12,7 +12,11 @@ Development of multifunctional css with methodology BEM
 
 _placeholder-selectors.scss
 1.- flex en todos sus tipos y si faltan agregar con esta misma sintaxis ya echa
-2.- estandarizacion del btn y select, ambos con hover
+2.- estandarizacion del button y select y texto, todos simulan se como botones y en el caso de texto tambien tendria un hover
+
+NOTAS:
+clase "link" usualmente es para los links y la lista de links de lo footers
+en caso de usar boostrap podemos omitir algunas cosas escritas aqui, dependera y esta por verse aun
 
 
 

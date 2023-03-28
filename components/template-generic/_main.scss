@@ -3,7 +3,6 @@
     //font-family: var(--font);
     //font-size: var(--txt-size);
     .btn{
-        @extend %btn;
         &.border{
            border-color: #f36d33;
            background: #edb8a1;
@@ -12,10 +11,15 @@
             background-color: green;
         }
         &.reset{
-            background-color: rgb(62, 0, 207);
+            background-color: rgb(255 0 0);
         }
         &.send{
             background-color: #f36d33;
+        }
+    }
+    .slc{
+        &.cd-red{
+            background-color: red;
         }
     }
     .group{
@@ -48,3 +52,6 @@
 }
 
 
+
+//una iamgen que cambia en duro dependendien del la selecion del tamaño de pantalla con la eituqeta source
+//<picture class="navbar__logo-img"><source media="(max-width: 477px)" srcset="https://d3oqh5ecy4r3n8.cloudfront.net/img/bitstarz-logo-mobile.9133139.svg" width="40" height="31"> <source media="(min-width: 478px)" srcset="https://d3oqh5ecy4r3n8.cloudfront.net/img/bitstarz-logo.1d214b2.svg" width="121" height="22"> <img src="https://d3oqh5ecy4r3n8.cloudfront.net/img/bitstarz-logo.1d214b2.svg" alt="BitStarz logo" width="121" height="22"></picture>

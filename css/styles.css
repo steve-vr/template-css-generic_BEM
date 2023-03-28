@@ -1,16 +1,55 @@
-.globalcss .btn:hover {
+.globalcss .btn:hover, .globalcss .slc:hover {
   filter: brightness(0.9);
 }
 
-.globalcss .btn {
+.globalcss .btn, .globalcss .slc {
   cursor: pointer;
   font-size: inherit;
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid transparent;
-  background-color: #7e7e7e;
+  border: 1px solid #000;
+  background-color: #fff;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.globalcss .slc {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.globalcss .ipt {
+  font-size: inherit;
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.globalcss .ipt:focus {
+  box-shadow: 0 0 0 0.1rem #383838;
+  border: 1px solid transparent;
+}
+.globalcss .search.ipt {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='8' fill='none' stroke='%23000' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23000' stroke-width='2'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px 14px;
+  padding-right: 2rem;
+}
+
+.globalcss .link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.globalcss .link:hover, .globalcss .active.link {
+  color: red;
 }
 
 *,
@@ -19,26 +58,23 @@
   box-sizing: border-box;
 }
 
+.globalcss, body, p, ul {
+  margin: 0;
+}
+
 .globalcss {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
-  background-color: #000;
+  background-color: #fff;
 }
 .globalcss * {
-  color: #fff;
+  color: #000;
 }
 .globalcss :focus, .globalcss :focus-visible {
   outline: 0;
 }
-.globalcss :disabled {
+.globalcss :disabled, .globalcss :disabled:hover {
   filter: brightness(0.7);
-}
-.globalcss :disabled:hover {
-  filter: brightness(0.7);
-}
-
-.globalcss, body, p, ul {
-  margin: 0;
 }
 
 /*h6, h5, h4, h3, h2, h1{
@@ -53,10 +89,13 @@
   background-color: green;
 }
 .globalcss .btn.reset {
-  background-color: rgb(62, 0, 207);
+  background-color: rgb(255, 0, 0);
 }
 .globalcss .btn.send {
   background-color: #f36d33;
+}
+.globalcss .slc.cd-red {
+  background-color: red;
 }
 .globalcss .group__flex, .globalcss .group__flex--resize {
   display: flex;
