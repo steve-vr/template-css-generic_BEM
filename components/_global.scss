@@ -15,7 +15,11 @@
     font-family: $g-font;
     font-size: $g-font-size;
     background-color: $bgc-body;
-
+    .header{
+        &__logo{
+            cursor: pointer;
+        }
+    }
     .btn{
         @extend %button;
     }

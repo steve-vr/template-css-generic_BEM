@@ -14,9 +14,10 @@ _placeholder-selectors.scss
 1.- flex en todos sus tipos y si faltan agregar con esta misma sintaxis ya echa
 2.- estandarizacion del button y select y texto, todos simulan se como botones y en el caso de texto tambien tendria un hover
 
-NOTAS:
+NOTAS:  
 clase "link" usualmente es para los links y la lista de links de lo footers
 en caso de usar boostrap podemos omitir algunas cosas escritas aqui, dependera y esta por verse aun
+-por temas de rendimiento siempre verificar si los logo o imagenes extra pesan mas de 1mb, solo las que si puedan hacerse como el logo 
 
 
 

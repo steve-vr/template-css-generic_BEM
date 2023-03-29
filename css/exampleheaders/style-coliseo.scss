@@ -1,0 +1,28 @@
+$body  : ".coliseosport"; //nombre de la pagina
+$page : "coliseosport";//default-light || default-dark
+@import '../../components/variables';
+@import '../../components/placeholder-selectors';
+@import '../../components/global';
+
+
+
+#{$body}{
+    .header{
+        @extend %f-aic__s-b;
+        height: 4rem;
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+        background-color: $bgc-header;
+    }
+    .ex__h-content{
+        @extend %f; 
+        gap: 0.25rem;
+        width: 14rem;
+    }
+    .btn{
+        &.login{
+            background-color: $bgc-primary;
+            text-transform: uppercase;
+        }
+    }
+}

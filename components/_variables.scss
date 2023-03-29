@@ -1,24 +1,31 @@
-$body  : ".globalcss"; //nombre de la pagina
+
 //$theme : "dark";// them coliseosport, theme jetbet, theme-dark01 
-$page : "default-light";//default-light || default-dark
+
 //g = global
 //bgc = background-color
 $bgc-body      : null;
 $bgc-header    : null;
-
+$menu-shape : 'normal';//la forma que tendra el menu
 $g-color       :null;
-$color-primary : null;
+$color-primary :null;
 
 $bgc-btn       : null;
 $border-btn    : "1px solid transparent";
 $borderR-btn   : 0.25rem;
+$bgc-ipt    : #000;
+//$shadow-ipt    : "0 0 0 0.1rem #383838";
 
+$icon-color : '000';
+$placeholder-color: #000;
 
 $g-font        : system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $g-font-size   : 14px;
 $g-hover       : brightness(.9);
 $g-disabled    : brightness(.7);
 $size-web      : 1200px;
+
+$bgc-header: null;
+$bgc-primary: null;
 
 
 //@if($theme == "light" and $g-color == null){
@@ -31,6 +38,7 @@ $size-web      : 1200px;
     $bgc-btn    : #fff;
     $g-color    : '000';
     $border-btn : 1px solid #000;
+    $icon-color : '000';
     //$color-primary : #f54b00;
     //$bgc-body :#1c2226;
     //$bgc-header : #000;
@@ -39,19 +47,65 @@ $size-web      : 1200px;
     $bgc-body   :#000;
     $g-color    : 'fff';
     $bgc-btn    : #7e7e7e;
+    $icon-color : '000';
     //$border-btn : 1px solid transparent;
     //$color-primary : #f54b00;
     //$bgc-body :#1c2226;
     //$bgc-header : #000;
 }
 
-@if($page == "colisesport"){
+@if($page == "coliseosport"){
     $g-color : '000';
     $color-primary : #f54b00;
+    $icon-color : '000';
+    //$bgc-body :#1c2226;
+    $bgc-body :#313233;
+    $bgc-header: #20252C;
+    $bgc-primary: #f54b00;
+}
+
+@if($page == "latinosbet"){
+    $g-color : 'fff';
+    $color-primary : hsl(46,79.2%,58.4%);
+    $icon-color : '000';
+    //$bgc-body :#1c2226;
+    $bgc-body :#313233;
+    $bgc-header: hsl(180,2.9%,6.9%);
+}
+@if($page == "bitstarz"){
+    $g-color : 'fff';
+    $color-primary : #0dd182;
+    $icon-color : 'd3d7db';
+    //$bgc-body :#1c2226;
+    $bgc-body :#313233;
+    $bgc-header : #0d0d0d;
+    $placeholder-color:#d3d7db;
+    $menu-shape : $page;
+   // $bgc-ipt: #f2f6f9;
+}
+@if($page == "goldenbet"){
+    $g-color : 'fff';
+    $color-primary : #edce34;
+    $icon-color : '757575';
     //$bgc-body :#1c2226;
     $bgc-body :#313233;
     $bgc-header : #000;
+    $placeholder-color:#757575;
+    $menu-shape : "normal";
+   // $bgc-ipt: #f2f6f9;
+}
+@if($page == "lajoya"){
+    $g-color : 'fff';
+    $color-primary : #f54b00;
+    $icon-color : '000';
+    //$bgc-body :#1c2226;
+    $bgc-body :#313233;
+    $bgc-header: #000;
+    $bgc-primary: #f54b00;
 }
 
-$arrow-down:"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23#{$g-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e";
-$lens:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='8' fill='none' stroke='%23#{$g-color}' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23#{$g-color}' stroke-width='2'/></svg>";
+//podemos ponder los botones de login y singup como variables y dentro de esta declarar lo colore el borde etc, mas rapido saldria, al igual que con el logo
+//las caracterisitcas que encsita y que se mueva por eoss micro compnenetes por haci decirlo
+
+$arrow-down:"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23#{$icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e";
+$lens:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7' fill='none' stroke='%23#{$icon-color}' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23#{$icon-color}' stroke-width='2'/></svg>";

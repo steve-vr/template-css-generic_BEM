@@ -1,0 +1,213 @@
+.goldenbet .ex__h-content, .goldenbet .h-content {
+  display: flex;
+}
+.goldenbet .btn:hover, .goldenbet .slc:hover {
+  filter: brightness(0.9);
+}
+
+.goldenbet .btn, .goldenbet .slc {
+  cursor: pointer;
+  font-size: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.goldenbet .slc {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23757575' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.goldenbet .ipt {
+  font-size: inherit;
+  border: 1px solid transparent;
+  background-color: #000;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.goldenbet .ipt:focus {
+  box-shadow: 0 0 0 0.1rem #1f1f1f;
+  border: 1px solid transparent;
+}
+.goldenbet .ipt::-moz-placeholder {
+  color: #757575;
+}
+.goldenbet .ipt::placeholder {
+  color: #757575;
+}
+.goldenbet .search.ipt {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7' fill='none' stroke='%23757575' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23757575' stroke-width='2'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  padding-right: 2rem;
+  background-position: right 0.5rem center;
+}
+
+.goldenbet .link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.goldenbet .link:hover, .goldenbet .active.link {
+  color: #edce34;
+}
+
+.goldenbet .header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 38px;
+  padding: 10px;
+  background-color: transparent;
+}
+.goldenbet .header__menu span {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  background: transparent;
+}
+.goldenbet .header__menu:after, .goldenbet .header__menu:before, .goldenbet .header__menu span:after, .goldenbet .header__menu span:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background: #fff;
+  transition: opacity 0.2s ease-in-out, transform 0.25s ease-in-out;
+}
+.goldenbet .header__menu span:after, .goldenbet .header__menu span:before {
+  position: absolute;
+  width: 100%;
+}
+.goldenbet .is-open.header__menu span:before {
+  transform: rotate(45deg);
+}
+.goldenbet .is-open.header__menu span:after {
+  transform: rotate(-45deg);
+}
+.goldenbet .is-open.header__menu:before, .goldenbet .is-open.header__menu:after {
+  opacity: 0;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, to {
+    left: 100%;
+  }
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, to {
+    top: 100%;
+  }
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%, to {
+    height: 2px;
+    right: 100%;
+  }
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, to {
+    bottom: 100%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.goldenbet, body, p, ul {
+  margin: 0;
+}
+
+.goldenbet {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  background-color: #313233;
+}
+.goldenbet * {
+  color: #fff;
+}
+.goldenbet .header__logo {
+  cursor: pointer;
+}
+.goldenbet :focus, .goldenbet :focus-visible {
+  outline: 0;
+}
+.goldenbet :disabled, .goldenbet :disabled:hover {
+  filter: brightness(0.7);
+}
+
+/*h6, h5, h4, h3, h2, h1{
+    margin: 0;
+    font-weight: 500;
+}*/
+.goldenbet .header {
+  display: grid;
+  grid-template-columns: 40px 5.5rem 1fr 22rem 17rem;
+  align-items: center;
+  height: 4rem;
+  padding: 0 0.5rem;
+  gap: 1rem;
+  background-color: #000;
+  box-shadow: 0 4px 12px rgba(22, 20, 33, 0.2);
+}
+.goldenbet .header__logo {
+  width: 5.5rem;
+}
+.goldenbet .list-games {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.goldenbet .h-content {
+  gap: 0.5rem;
+}
+.goldenbet .ex__h-content {
+  gap: 0.25rem;
+}
+.goldenbet .btn.login, .goldenbet .btn.singup {
+  text-transform: uppercase;
+}
+.goldenbet .btn.login {
+  background-color: #edce34;
+  color: #000;
+}
+.goldenbet .btn.singup {
+  background-color: #3d3d4c;
+}
+.goldenbet .ipt.search {
+  background-color: #fff;
+  color: #000;
+  width: 20rem;
+}
+.goldenbet .ipt.search:focus {
+  box-shadow: 0 0 0 0.1rem grey;
+}
+.goldenbet .ipt.credentials {
+  border: 1px solid grey;
+}/*# sourceMappingURL=style-goldenbet.css.map */

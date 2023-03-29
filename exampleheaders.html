@@ -4,13 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/exampleheaders/style-coliseo.css">
+    <link rel="stylesheet" href="css/exampleheaders/style-latinosbet.css">
+    <link rel="stylesheet" href="css/exampleheaders/style-bitstarz.css">
+    <link rel="stylesheet" href="css/exampleheaders/style-goldenbet.css">
+    <link rel="stylesheet" href="css/exampleheaders/style-lajoya.css">
     <title>Exampleheaders</title>
 </head>
 <body>
     <div id="app">
-        <div>
-            <header>
-    
+        <h1>SE PUEDEN COLOCAR UNO DENTRO DE OTRO SIN QUE ESTE AFECTE SU CSS INTERNO</h1>
+        <div class="coliseosport">
+            <header class="header">
+                <img class="header__logo" src="https://coliseosport.com/img/logo.png" alt="">
+                <div class="ex__h-content">
+                    <button class="btn login">Entrar</button>
+                    <button class="btn singup">Registro</button>
+                </div>
+            </header>
+        </div>
+        <br>
+        <div class="latinosbet">
+            <header class="header">
+                <img class="header__logo" src="https://cdn.diststore.com/images/products/lsb/logo.png" alt="">
+                <div class="list-games">
+                    <a class="link active">Deportes</a>
+                    <a class="link">En vivo</a>
+                    <a class="link">Casino</a>
+                    <a class="link">Casino en Vivo</a>
+                    <a class="link">Juegos Virtuales</a>
+                    <a class="link">Aviator</a>
+                    <a class="link">Carreras Hípicas</a>
+                </div>
+                <div class="ex__h-content">
+                    <button class="btn login">Acceso</button>
+                    <button class="btn singup">Registrar</button>
+                </div>
+            </header>
+        </div>
+        <br>
+        <div class="bitstarz">
+            <header class="header">
+                <button class="btn header__menu" :class="{ 'is-open': btnmenuBitstarz }" @click="menuBitstarz"><span></span></button>
+                <img class="header__logo" src="https://d3oqh5ecy4r3n8.cloudfront.net/img/bitstarz-logo.1d214b2.svg" alt="">
+                <div>
+                    <input class="ipt search" type="text" placeholder="Find game or game studio (try roulette,book...)">
+                </div>
+                <div class="ex__h-content">
+                    <button class="btn login">Login</button>
+                    <button class="btn singup">Sing up</button>
+                </div>
+            </header>
+        </div>
+        <br>
+        <div class="goldenbet">
+            <header class="header">
+                <button class="btn header__menu" :class="{ 'is-open': btnmenuBitstarz }" @click="menuBitstarz"><span></span></button>
+                <img class="header__logo" src="https://d2zzz5z45zl95g.cloudfront.net/golden/logo.svg" alt="">
+                <div>
+                    <input class="ipt search" type="text" placeholder="Buscar">
+                </div>
+                <div class="h-content">
+                    <input class="ipt credentials" type="text" placeholder="Usuario">
+                    <input class="ipt credentials" type="password" placeholder="Contraseña">
+                </div>
+                <div class="ex__h-content">
+                    <button class="btn login">Iniciar sesión</button>
+                    <button class="btn singup">Registro</button>
+                </div>
+            </header>
+        </div>
+        <br>
+        <div class="lajoya">
+            <header class="header">
+                <img class="header__logo" src="	https://lajoya.club/home/logo.png" alt="">
+                <div class="ex__h-content">
+                    <button class="btn login"><span></span><span></span><span></span><span></span>Entrar</button>
+                    <button class="btn singup">Registro</button>
+                </div>
             </header>
         </div>
     </div>
@@ -24,9 +95,12 @@
         el: '#app',
         data: {
             device:'',
+            btnmenuBitstarz: false
         },
         methods:{
-   
+            menuBitstarz(){
+                this.btnmenuBitstarz = !this.btnmenuBitstarz;
+            }
         },
         mounted() {
             const detectDevice = /Mobi/.test(navigator.userAgent) || screen.innerWidth <= 1200;

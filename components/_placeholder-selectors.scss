@@ -129,7 +129,7 @@
     font-size: inherit;
     width: 100%;
     padding: 0.5rem;
-    border: #{$border-btn};
+    border: #{$border-btn}; 
     background-color: #{$bgc-btn};
     border-radius: #{$borderR-btn};
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -149,31 +149,166 @@
 %input{
     font-size: inherit;
     border: #{$border-btn};
-    background-color: #{$bgc-btn};
+    background-color: $bgc-ipt;
     width: 100%;
     border-radius: #{$borderR-btn};
     padding: 0.5rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     &:focus{
         @extend %input;
-        box-shadow:  0 0 0 0.1rem #383838;//esto cambia por color primarui
+        box-shadow: 0 0 0 0.1rem lighten($bgc-ipt, 12%);//esto cambia por color primarui
         border: 1px solid transparent;
+    }   
+    &::placeholder {
+        color: $placeholder-color;
     }
     &.search{
         background-image: url("#{$lens}");
         background-repeat: no-repeat;
-        background-position: right 0.5rem center;
-        background-size: #{$g-font-size} #{$g-font-size};
+        background-size: #{$g-font-size + 4} #{$g-font-size + 4};
         padding-right: 2rem;
+        background-position: right 0.5rem center;
     }
 }
 %link{
     cursor: pointer;
     text-decoration: none;
     &:hover, &.active{
-        color: red;//esto cambia por color primarui
+        color: $color-primary;//esto cambia por color primarui
+    }
+}
+//menu de hambuerguesa
+%dropdown-menu{
+    &{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 38px;
+        padding: 10px;
+        background-color: transparent;
+    }
+    & span{
+        width: 100%;
+        height: 2px;
+        position: relative;
+        background: transparent;
+    }
+     &:after, &:before, & span:after, & span:before {
+        content: "";
+        display: block;
+        @if($menu-shape == "normal"){
+            width: 100%;
+        }@else if($menu-shape == "bitstarz"){
+            width: 14px;
+        }
+        height: 2px;
+        border-radius: 4px;
+        background: #fff;
+        transition: opacity .2s ease-in-out,transform .25s ease-in-out;
+    }
+     & span:after,   & span:before {
+        position: absolute;
+        width: 100%;
+    }
+    &.is-open span:before {
+        transform: rotate(45deg);
+    }
+    &.is-open span:after {
+        transform: rotate(-45deg);
+    }
+    &.is-open:before,&.is-open:after {
+        opacity: 0;
     }
 }
 
-
-
+@mixin animationInfiniteDisplacementSquad($border-color1,$border-color2,$border-color-animation){
+    background-color: transparent;
+    overflow: hidden;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, $border-color1, $border-color2);
+    &:hover{
+        border: 1px solid transparent;
+        & span{
+            position: absolute;
+            display: block;
+            &:nth-child(1){
+                filter: hue-rotate(0deg);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(90deg,transparent,$border-color-animation);
+                animation: animate1 1s linear infinite;
+            }
+            &:nth-child(2){
+                filter: hue-rotate(60deg);
+                top: -100%;
+                right: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(180deg,transparent,$border-color-animation);
+                animation: animate2 1s linear infinite;
+                animation-delay: .25s;
+            }
+            &:nth-child(3){
+                filter: hue-rotate(120deg);
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(270deg,transparent,$border-color-animation);
+                animation: animate3 1s linear infinite;
+                animation-delay: .5s
+            }
+            &:nth-child(4){
+                filter: hue-rotate(300deg);
+                bottom: -100%;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(360deg,transparent,$border-color-animation);
+                animation: animate4 1s linear infinite;
+                animation-delay: .75s
+            }
+        }
+    }
+}
+%keyframejoya{
+    @keyframes animate1 {
+        0% {
+            left: -100%
+        }
+    
+        50%,to {
+            left: 100%
+        }
+    }
+    @keyframes animate2 {
+        0% {
+            top: -100%
+        }
+    
+        50%,to {
+            top: 100%
+        }
+    }
+    @keyframes animate3 {
+        0% {
+            right: -100%;
+            height: 3px
+        }
+        50%,to {
+            height: 2px;
+            right: 100%
+        }
+    }
+    @keyframes animate4 {
+        0% {
+            bottom: -100%
+        }
+    
+        50%,to {
+            bottom: 100%
+        }
+    }
+}

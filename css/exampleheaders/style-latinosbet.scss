@@ -1,0 +1,46 @@
+$body  : ".latinosbet"; //nombre de la pagina
+$page : "latinosbet";//default-light || default-dark
+@import '../../components/variables';
+
+$borderR-btn   : 0;
+
+@import '../../components/placeholder-selectors';
+@import '../../components/global';
+
+
+
+#{$body}{
+    .header{
+        @extend %f-aic__s-b;
+        height: 4rem;
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+        background-color: $bgc-header;
+    }
+    .list-games{
+        display: flex;
+        gap: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .ex__h-content{
+        @extend %f; 
+        gap: 0.25rem;
+        width: 14rem;
+    }
+    .btn{
+        &.login{
+            background-color: $color-primary;
+            color: #000;
+        }
+        &.singup{
+            background-color: transparent;
+            border: 2px solid $color-primary;
+            color: $color-primary;
+            &:hover{
+                background-color:  $color-primary;
+                color: #000;
+            }
+        }
+    }
+}
