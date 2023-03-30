@@ -9,10 +9,13 @@ $borderR-btn   : 0;
 
 #{$body}{
     .header{
-        @extend %f-aic__s-b;
+        display: grid;
+        grid-template-columns: 1fr 7rem 7rem;
+        align-items: center;
+        gap: 0.25rem;
+        
         height: 4rem;
         padding: 0 0.5rem;
-        gap: 0.5rem;
         background-color: $bgc-header;
         &__logo{
             width: 12rem;
@@ -28,14 +31,14 @@ $borderR-btn   : 0;
             font-weight: 600;
         }
         &.login{
-            @include animationInfiniteDisplacementSquad(#3a1875,#d53a9d,#3a86ff);
-            @extend %keyframejoya;
+            @include borderSquareAnimated(#3a1875,#d53a9d,#3a86ff,1);
         }
         &.singup{
             background-color: #138d75;
         }
     }
-   //  @extend %keyframejoya;
+    //animaciones
+    @include animation-borderSquare();
 }
 
 

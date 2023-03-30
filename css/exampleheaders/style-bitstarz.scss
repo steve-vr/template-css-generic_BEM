@@ -11,7 +11,7 @@ $page : "bitstarz";//default-light || default-dark
 #{$body}{
     .header{
         display: grid;
-        grid-template-columns: 40px 8rem 1fr 14rem;
+        grid-template-columns: 40px 8rem 1fr 7rem 7rem;
         align-items: center;
         height: 4rem;
         padding: 0 0.5rem;
@@ -28,11 +28,6 @@ $page : "bitstarz";//default-light || default-dark
         gap: 1rem;
         font-size: 1rem;
         font-weight: 500;
-    }
-    .ex__h-content{
-        @extend %f; 
-        gap: 0.25rem;
-        width: 14rem;
     }
     .btn{
         &.login,&.singup{

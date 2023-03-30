@@ -11,7 +11,10 @@ $borderR-btn   : 0;
 
 #{$body}{
     .header{
-        @extend %f-aic__s-b;
+        display: grid;
+        grid-template-columns: auto 1fr 7rem 7rem;
+        align-items: center;
+        justify-items: center;
         height: 4rem;
         padding: 0 0.5rem;
         gap: 0.5rem;
@@ -23,11 +26,7 @@ $borderR-btn   : 0;
         font-size: 1rem;
         font-weight: 500;
     }
-    .ex__h-content{
-        @extend %f; 
-        gap: 0.25rem;
-        width: 14rem;
-    }
+
     .btn{
         &.login{
             background-color: $color-primary;

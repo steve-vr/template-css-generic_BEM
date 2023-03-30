@@ -36,7 +36,7 @@ $bgc-primary: null;
 @if($page == "default-light"){
     $bgc-body   :#fff;
     $bgc-btn    : #fff;
-    $g-color    : '000';
+    $g-color    : #000;
     $border-btn : 1px solid #000;
     $icon-color : '000';
     //$color-primary : #f54b00;
@@ -45,7 +45,7 @@ $bgc-primary: null;
 }
 @if($page == "default-dark"){
     $bgc-body   :#000;
-    $g-color    : 'fff';
+    $g-color    : #fff;
     $bgc-btn    : #7e7e7e;
     $icon-color : '000';
     //$border-btn : 1px solid transparent;
@@ -55,7 +55,7 @@ $bgc-primary: null;
 }
 
 @if($page == "coliseosport"){
-    $g-color : '000';
+    $g-color : #000;
     $color-primary : #f54b00;
     $icon-color : '000';
     //$bgc-body :#1c2226;
@@ -65,7 +65,7 @@ $bgc-primary: null;
 }
 
 @if($page == "latinosbet"){
-    $g-color : 'fff';
+    $g-color : #fff;
     $color-primary : hsl(46,79.2%,58.4%);
     $icon-color : '000';
     //$bgc-body :#1c2226;
@@ -73,7 +73,7 @@ $bgc-primary: null;
     $bgc-header: hsl(180,2.9%,6.9%);
 }
 @if($page == "bitstarz"){
-    $g-color : 'fff';
+    $g-color : #fff;
     $color-primary : #0dd182;
     $icon-color : 'd3d7db';
     //$bgc-body :#1c2226;
@@ -84,7 +84,7 @@ $bgc-primary: null;
    // $bgc-ipt: #f2f6f9;
 }
 @if($page == "goldenbet"){
-    $g-color : 'fff';
+    $g-color : #fff;
     $color-primary : #edce34;
     $icon-color : '757575';
     //$bgc-body :#1c2226;
@@ -95,7 +95,7 @@ $bgc-primary: null;
    // $bgc-ipt: #f2f6f9;
 }
 @if($page == "lajoya"){
-    $g-color : 'fff';
+    $g-color : #fff;
     $color-primary : #f54b00;
     $icon-color : '000';
     //$bgc-body :#1c2226;

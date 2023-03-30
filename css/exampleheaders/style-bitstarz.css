@@ -1,6 +1,3 @@
-.bitstarz .ex__h-content {
-  display: flex;
-}
 .bitstarz .btn:hover, .bitstarz .slc:hover {
   filter: brightness(0.9);
 }
@@ -98,41 +95,6 @@
   opacity: 0;
 }
 
-@keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%, to {
-    left: 100%;
-  }
-}
-@keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%, to {
-    top: 100%;
-  }
-}
-@keyframes animate3 {
-  0% {
-    right: -100%;
-    height: 3px;
-  }
-  50%, to {
-    height: 2px;
-    right: 100%;
-  }
-}
-@keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%, to {
-    bottom: 100%;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -167,7 +129,7 @@
 }*/
 .bitstarz .header {
   display: grid;
-  grid-template-columns: 40px 8rem 1fr 14rem;
+  grid-template-columns: 40px 8rem 1fr 7rem 7rem;
   align-items: center;
   height: 4rem;
   padding: 0 0.5rem;
@@ -180,10 +142,6 @@
   gap: 1rem;
   font-size: 1rem;
   font-weight: 500;
-}
-.bitstarz .ex__h-content {
-  gap: 0.25rem;
-  width: 14rem;
 }
 .bitstarz .btn.login, .bitstarz .btn.singup {
   text-transform: uppercase;

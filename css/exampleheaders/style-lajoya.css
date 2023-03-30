@@ -1,11 +1,5 @@
-.lajoya .ex__h-content, .lajoya .header {
+.lajoya .ex__h-content {
   display: flex;
-}
-.lajoya .header {
-  align-items: center;
-}
-.lajoya .header {
-  justify-content: space-between;
 }
 .lajoya .btn:hover, .lajoya .slc:hover {
   filter: brightness(0.9);
@@ -66,41 +60,6 @@
   color: #f54b00;
 }
 
-@keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%, to {
-    left: 100%;
-  }
-}
-@keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%, to {
-    top: 100%;
-  }
-}
-@keyframes animate3 {
-  0% {
-    right: -100%;
-    height: 3px;
-  }
-  50%, to {
-    height: 2px;
-    right: 100%;
-  }
-}
-@keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%, to {
-    bottom: 100%;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -134,9 +93,12 @@
     font-weight: 500;
 }*/
 .lajoya .header {
+  display: grid;
+  grid-template-columns: 1fr 7rem 7rem;
+  align-items: center;
+  gap: 0.25rem;
   height: 4rem;
   padding: 0 0.5rem;
-  gap: 0.5rem;
   background-color: #000;
 }
 .lajoya .header__logo {
@@ -154,6 +116,7 @@
   overflow: hidden;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #3a1875, #d53a9d);
+  border-image-width: 1;
 }
 .lajoya .btn.login:hover {
   border: 1px solid transparent;
@@ -169,7 +132,7 @@
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, transparent, #3a86ff);
-  animation: animate1 1s linear infinite;
+  animation: borderTop 1s linear infinite;
 }
 .lajoya .btn.login:hover span:nth-child(2) {
   filter: hue-rotate(60deg);
@@ -178,7 +141,7 @@
   width: 3px;
   height: 100%;
   background: linear-gradient(180deg, transparent, #3a86ff);
-  animation: animate2 1s linear infinite;
+  animation: borderRight 1s linear infinite;
   animation-delay: 0.25s;
 }
 .lajoya .btn.login:hover span:nth-child(3) {
@@ -187,7 +150,7 @@
   right: 0;
   width: 100%;
   background: linear-gradient(270deg, transparent, #3a86ff);
-  animation: animate3 1s linear infinite;
+  animation: borderBottom 1s linear infinite;
   animation-delay: 0.5s;
 }
 .lajoya .btn.login:hover span:nth-child(4) {
@@ -197,9 +160,43 @@
   width: 3px;
   height: 100%;
   background: linear-gradient(360deg, transparent, #3a86ff);
-  animation: animate4 1s linear infinite;
+  animation: borderLeft 1s linear infinite;
   animation-delay: 0.75s;
 }
 .lajoya .btn.singup {
   background-color: #138d75;
+}
+@keyframes borderTop {
+  0% {
+    left: -100%;
+  }
+  50%, to {
+    left: 100%;
+  }
+}
+@keyframes borderRight {
+  0% {
+    top: -100%;
+  }
+  50%, to {
+    top: 100%;
+  }
+}
+@keyframes borderBottom {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%, to {
+    height: 2px;
+    right: 100%;
+  }
+}
+@keyframes borderLeft {
+  0% {
+    bottom: -100%;
+  }
+  50%, to {
+    bottom: 100%;
+  }
 }/*# sourceMappingURL=style-lajoya.css.map */
