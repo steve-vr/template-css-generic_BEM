@@ -9,22 +9,7 @@ $borderR-btn   : 0;
 
 #{$body}{
     .header{
-        display: grid;
-        grid-template-columns: 1fr 7rem 7rem;
-        align-items: center;
-        gap: 0.25rem;
-        
-        height: 4rem;
-        padding: 0 0.5rem;
-        background-color: $bgc-header;
-        &__logo{
-            width: 12rem;
-        }
-    }
-    .ex__h-content{
-        @extend %f; 
-        gap: 0.25rem;
-        width: 14rem;
+        @include structureHeader("coliseosport",10rem);
     }
     .btn{
         &.login,&.singup{

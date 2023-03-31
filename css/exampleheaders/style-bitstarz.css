@@ -113,9 +113,6 @@
 .bitstarz * {
   color: #fff;
 }
-.bitstarz .header__logo {
-  cursor: pointer;
-}
 .bitstarz :focus, .bitstarz :focus-visible {
   outline: 0;
 }

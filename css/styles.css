@@ -72,9 +72,6 @@
 .globalcss * {
   color: #000;
 }
-.globalcss .header__logo {
-  cursor: pointer;
-}
 .globalcss :focus, .globalcss :focus-visible {
   outline: 0;
 }

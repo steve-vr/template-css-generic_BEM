@@ -1,6 +1,3 @@
-.lajoya .ex__h-content {
-  display: flex;
-}
 .lajoya .btn:hover, .lajoya .slc:hover {
   filter: brightness(0.9);
 }
@@ -78,9 +75,6 @@
 .lajoya * {
   color: #fff;
 }
-.lajoya .header__logo {
-  cursor: pointer;
-}
 .lajoya :focus, .lajoya :focus-visible {
   outline: 0;
 }
@@ -96,17 +90,14 @@
   display: grid;
   grid-template-columns: 1fr 7rem 7rem;
   align-items: center;
-  gap: 0.25rem;
   height: 4rem;
   padding: 0 0.5rem;
+  gap: 0.5rem;
   background-color: #000;
 }
 .lajoya .header__logo {
-  width: 12rem;
-}
-.lajoya .ex__h-content {
-  gap: 0.25rem;
-  width: 14rem;
+  cursor: pointer;
+  width: 10rem;
 }
 .lajoya .btn.login, .lajoya .btn.singup {
   font-weight: 600;

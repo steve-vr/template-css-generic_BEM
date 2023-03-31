@@ -75,9 +75,6 @@
 .coliseosport * {
   color: #000;
 }
-.coliseosport .header__logo {
-  cursor: pointer;
-}
 .coliseosport :focus, .coliseosport :focus-visible {
   outline: 0;
 }
@@ -97,6 +94,10 @@
   padding: 0 0.5rem;
   gap: 0.5rem;
   background-color: #20252C;
+}
+.coliseosport .header__logo {
+  cursor: pointer;
+  width: 9rem;
 }
 .coliseosport .btn.login {
   background-color: #f54b00;

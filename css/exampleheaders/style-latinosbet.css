@@ -75,9 +75,6 @@
 .latinosbet * {
   color: #fff;
 }
-.latinosbet .header__logo {
-  cursor: pointer;
-}
 .latinosbet :focus, .latinosbet :focus-visible {
   outline: 0;
 }

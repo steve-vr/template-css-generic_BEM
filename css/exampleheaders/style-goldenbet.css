@@ -116,9 +116,6 @@
 .goldenbet * {
   color: #fff;
 }
-.goldenbet .header__logo {
-  cursor: pointer;
-}
 .goldenbet :focus, .goldenbet :focus-visible {
   outline: 0;
 }
