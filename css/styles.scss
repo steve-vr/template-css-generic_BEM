@@ -21,8 +21,9 @@ $form-height: 2.6rem;
 $p-container: 0.5rem;
 
 
-@import '../components/placeholder-selectors';
 @import '../components/global';
+@import "../components/mixins";
+@import '../components/placeholder-selectors';
 
 @import '../components/template-generic/main';
 //@import '../components/template-generic/ex-coliseosport';

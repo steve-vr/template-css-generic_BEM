@@ -1,0 +1,186 @@
+//strucures
+//menu de hambuerguesa
+@mixin dropdown-menu($design-menubar){
+    &{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 38px;
+        padding: 10px;
+        background-color: transparent;
+    }
+    & span{
+        width: 100%;
+        height: 2px;
+        position: relative;
+        background: transparent;
+    }
+     &:after, &:before, & span:after, & span:before {
+        content: "";
+        display: block;
+        @if($design-menubar == "normal"){
+            width: 100%;
+        }@else if($design-menubar == "bitstarz"){
+            width: 14px;
+        }
+        height: 2px;
+        border-radius: 4px;
+        background: #fff;
+        transition: opacity .2s ease-in-out,transform .25s ease-in-out;
+    }
+     & span:after,   & span:before {
+        position: absolute;
+        width: 100%;
+    }
+    &.is-open span:before {
+        transform: rotate(45deg);
+    }
+    &.is-open span:after {
+        transform: rotate(-45deg);
+    }
+    &.is-open:before,&.is-open:after {
+        opacity: 0;
+    }
+}
+
+@mixin structureHeader($page,$widht-logo){
+    display: grid;
+    @if($page == "coliseosport"){ 
+        grid-template-columns: 1fr 7rem 7rem; 
+    }
+    @else if($page == "latinosbet"){ 
+        grid-template-columns: auto 1fr 7rem 7rem;
+        justify-items: center; 
+    }
+    @else if($page == "bitstarz"){ 
+        grid-template-columns: 40px $widht-logo 1fr 7rem 7rem;
+    }
+    @else if($page == "goldenbet"){ 
+        grid-template-columns: 40px $widht-logo 1fr 12rem 12rem 8rem 8rem;
+    }
+    align-items: center;
+    height: 4rem;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+    background-color: $bgc-header;
+    &__logo{
+        cursor: pointer;
+        width: $widht-logo;
+    }
+    //estrucutura css de pagina -- de momento no lo colocaremos
+    //@if($page == "latinosbet"){
+    //    &__games{
+    //        display: flex;
+    //        gap: 1rem;
+    //        font-size: 1rem;
+    //        font-weight: 500;
+    //    }
+    //}
+}
+@mixin searchHeader($bgc,$color, $widht-ipt){//, $icon-color- au  no creo
+    &.search{
+        background-color: $bgc;
+        width: $widht-ipt;
+        color: $color;
+        background-image: url("#{$lens}");
+        background-repeat: no-repeat;
+        background-size: #{$g-font-size + 4} #{$g-font-size + 4};
+        padding-right: 2rem;
+        background-position: right 0.5rem center;
+        &:focus{
+              box-shadow: 0 0 0 0.1rem lighten($bgc, 13%);
+        }
+    }
+}
+
+//animations
+@mixin borderSquareAnimated($b-color1,$b-color2,$bg-color, $b-witdth){
+    background-color: transparent;
+    overflow: hidden;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, $b-color1, $b-color2);
+    border-image-width: $b-witdth; 
+    &:hover{
+        border: 1px solid transparent;
+        & span{
+            position: absolute;
+            display: block;
+            &:nth-child(1){
+                filter: hue-rotate(0deg);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: linear-gradient(90deg,transparent,$bg-color);
+                animation: borderTop 1s linear infinite;
+            }
+            &:nth-child(2){
+                filter: hue-rotate(60deg);
+                top: -100%;
+                right: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(180deg,transparent,$bg-color);
+                animation: borderRight 1s linear infinite;
+                animation-delay: .25s;
+            }
+            &:nth-child(3){
+                filter: hue-rotate(120deg);
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                background: linear-gradient(270deg,transparent,$bg-color);
+                animation: borderBottom 1s linear infinite;
+                animation-delay: .5s
+            }
+            &:nth-child(4){
+                filter: hue-rotate(300deg);
+                bottom: -100%;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(360deg,transparent,$bg-color);
+                animation: borderLeft 1s linear infinite;
+                animation-delay: .75s
+            }
+        }
+    }
+}
+@mixin animation-borderSquare{
+    @keyframes borderTop {
+        0% {
+            left: -100%
+        }
+        50%,to {
+            left: 100%
+        }
+    }
+    @keyframes borderRight {
+        0% {
+            top: -100%
+        }
+    
+        50%,to {
+            top: 100%
+        }
+    }
+    @keyframes borderBottom {
+        0% {
+            right: -100%;
+            height: 3px
+        }
+        50%,to {
+            height: 2px;
+            right: 100%
+        }
+    }
+    @keyframes borderLeft {
+        0% {
+            bottom: -100%
+        }
+        50%,to {
+            bottom: 100%
+        }
+    }
+}

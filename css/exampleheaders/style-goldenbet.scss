@@ -1,43 +1,20 @@
 $body  : ".goldenbet"; //nombre de la pagina
 $page : "goldenbet";//default-light || default-dark
 @import '../../components/variables';
-@import '../../components/placeholder-selectors';
 @import '../../components/global';
+@import "../../components/mixins";
+@import '../../components/placeholder-selectors';
 
 
 
 #{$body}{
     .header{
-        display: grid;
-        grid-template-columns: 40px 5.5rem 1fr 22rem 17rem;
-        align-items: center;
-        height: 4rem;
-        padding: 0 0.5rem;
-        gap: 1rem;
-        background-color: $bgc-header;
-        box-shadow: 0 4px 12px rgba(22,20,33,.2);
+        @include structureHeader("goldenbet",5.5rem);
         &__menu{
-            @extend %dropdown-menu;
-        }
-        &__logo{
-            width: 5.5rem;
+            @include dropdown-menu("normal");
         }
     }
 
-    .list-games{
-        display: flex;
-        gap: 1rem;
-        font-size: 1rem;
-        font-weight: 500;
-    }
-    .h-content{
-        @extend %f;
-        gap: 0.5rem;
-    }
-    .ex__h-content{
-        @extend %f; 
-        gap: 0.25rem;
-    }
     .btn{
         &.login,&.singup{
             text-transform: uppercase;
@@ -51,16 +28,18 @@ $page : "goldenbet";//default-light || default-dark
         }
     }
     .ipt{
-        &.search{
-            background-color: #fff;
-            color: #000;
-            width: 20rem;
-            &:focus{
-                  box-shadow: 0 0 0 0.1rem grey;
-            }
-        }
+        @include searchHeader(#fff,#000,20rem);
+        //@include searchHeader("style1",#fff,#000,20rem); un ejemplo 
+        //&.search{
+        //    background-color: #fff;
+        //    color: #000;
+        //    width: 20rem;
+        //    &:focus{
+        //          box-shadow: 0 0 0 0.1rem grey;
+        //    }
+        //}
         &.credentials{
-            border: 1px solid grey;
+            border: 1px solid #a0a0a0;
         }
     }
 }

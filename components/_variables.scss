@@ -39,6 +39,7 @@ $bgc-primary: null;
     $g-color    : #000;
     $border-btn : 1px solid #000;
     $icon-color : '000';
+    $bgc-ipt: #ffff;
     //$color-primary : #f54b00;
     //$bgc-body :#1c2226;
     //$bgc-header : #000;
@@ -80,7 +81,6 @@ $bgc-primary: null;
     $bgc-body :#313233;
     $bgc-header : #0d0d0d;
     $placeholder-color:#d3d7db;
-    $menu-shape : $page;
    // $bgc-ipt: #f2f6f9;
 }
 @if($page == "goldenbet"){
@@ -91,7 +91,6 @@ $bgc-primary: null;
     $bgc-body :#313233;
     $bgc-header : #000;
     $placeholder-color:#757575;
-    $menu-shape : "normal";
    // $bgc-ipt: #f2f6f9;
 }
 @if($page == "lajoya"){

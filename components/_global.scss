@@ -32,9 +32,7 @@
     :focus, :focus-visible{
         outline: 0;
     }
-    :disabled, :disabled:hover{
-        filter: #{$g-disabled};
-    }
+
 
         //.header{
     //    background-color: $bgc-header;

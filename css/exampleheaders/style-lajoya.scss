@@ -2,8 +2,9 @@ $body  : ".lajoya"; //nombre de la pagina
 $page : "lajoya";//default-light || default-dark
 @import '../../components/variables';
 $borderR-btn   : 0;
-@import '../../components/placeholder-selectors';
 @import '../../components/global';
+@import "../../components/mixins";
+@import '../../components/placeholder-selectors';
 
 
 

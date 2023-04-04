@@ -1,23 +1,22 @@
 $body  : ".coliseosport"; //nombre de la pagina
 $page : "coliseosport";//default-light || default-dark
 @import '../../components/variables';
-@import '../../components/placeholder-selectors';
 @import '../../components/global';
+@import "../../components/mixins";
+@import '../../components/placeholder-selectors';
 
 
 
 #{$body}{
     .header{
         @include structureHeader("coliseosport",9rem);
-        //display: grid;
-        //grid-template-columns: 1fr 7rem 7rem;
-        //align-items: center;
-        //height: 4rem;
-        //padding: 0 0.5rem;
-        //gap: 0.5rem;
-        //background-color: $bgc-header;
     }
     .btn{
+        &.login,&.singup{
+            & i{
+                margin-right: 0.25rem;
+            }
+        }
         &.login{
             background-color: $bgc-primary;
             text-transform: uppercase;

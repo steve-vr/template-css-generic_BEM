@@ -1,33 +1,18 @@
 $body  : ".bitstarz"; //nombre de la pagina
 $page : "bitstarz";//default-light || default-dark
 @import '../../components/variables';
-
-
-@import '../../components/placeholder-selectors';
 @import '../../components/global';
+@import "../../components/mixins";
+@import '../../components/placeholder-selectors';
 
 
 
 #{$body}{
     .header{
-        display: grid;
-        grid-template-columns: 40px 8rem 1fr 7rem 7rem;
-        align-items: center;
-        height: 4rem;
-        padding: 0 0.5rem;
-        gap: 0.5rem;
-        background-color: $bgc-header;
-        box-shadow: 0 4px 12px rgba(22,20,33,.2);
+        @include structureHeader("bitstarz",auto);
         &__menu{
-            @extend %dropdown-menu;
+            @include dropdown-menu("bitstarz");
         }
-    }
-
-    .list-games{
-        display: flex;
-        gap: 1rem;
-        font-size: 1rem;
-        font-weight: 500;
     }
     .btn{
         &.login,&.singup{
@@ -42,12 +27,6 @@ $page : "bitstarz";//default-light || default-dark
         }
     }
     .ipt{
-        &.search{
-            background-color: #1b1928;
-            width: 25rem;
-            &:focus{
-                  box-shadow: 0 0 0 0.1rem lighten(#1b1928, 12%);
-            }
-        }
+        @include searchHeader(#1b1928,inherit,25rem);
     }
 }
