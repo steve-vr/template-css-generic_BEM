@@ -6,10 +6,10 @@ Development of multifunctional css with methodology BEM
 - Ejecuta "watch sass" en todos los archivos scss de la carpeta "exampleheaders"
 - Ahora ya puedes realizar la prueba
 
-####Prueba
-1.-Ingresa a exampleheaders.html
-2.- **Nota:** Los headers son independientes y tienen los mismo nombres de clase.
-3.- __Como 1ra prueba de lo mencionado anteriormente puedes colocar un bloque html como este:__
+####__Prueba__
+* Ingresa a exampleheaders.html
+* **Nota:** Los headers son independientes y tienen los mismo nombres de clase.
+* __Como 1ra prueba de lo mencionado anteriormente puedes colocar un bloque html como este:__
 ```
     <div class="latinosbet">
         ......
