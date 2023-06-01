@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.globalcss, body, p, ul {
+  margin: 0;
+}
+
+.globalcss {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  background-color: #fff;
+}
+.globalcss * {
+  color: #000;
+}
+.globalcss :focus, .globalcss :focus-visible {
+  outline: 0;
+}
+
+/*h6, h5, h4, h3, h2, h1{
+    margin: 0;
+    font-weight: 500;
+}*/
+.globalcss .slc:hover, .globalcss .btn:hover {
+  filter: brightness(0.9);
+}
+
+.globalcss .ipt:disabled, .globalcss .slc:disabled, .globalcss .btn:disabled {
+  filter: brightness(0.7);
+}
+
+.globalcss .slc, .globalcss .btn {
+  cursor: pointer;
+  font-size: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.globalcss .slc {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 14px 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.globalcss .ipt {
+  font-size: inherit;
+  border: 1px solid #000;
+  background-color: white;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.globalcss .ipt:focus {
+  box-shadow: 0 0 0 0.1rem white;
+  border: 1px solid transparent;
+}
+.globalcss .ipt::-moz-placeholder {
+  color: #000;
+}
+.globalcss .ipt::placeholder {
+  color: #000;
+}
+
+.globalcss .link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.globalcss .btn.border {
+  border-color: #f36d33;
+  background: #edb8a1;
+}
+.globalcss .btn.singup {
+  background-color: green;
+}
+.globalcss .btn.reset {
+  background-color: rgb(255, 0, 0);
+}
+.globalcss .btn.send {
+  background-color: #f36d33;
+}
+.globalcss .slc.cd-red {
+  background-color: red;
+}
+.globalcss .group__flex, .globalcss .group__flex--resize {
+  display: flex;
+  gap: 0.5rem;
+}
+.globalcss .group__flex--resize .btn {
+  width: 25%;
+}
+.globalcss .group__flex--resize.rem .btn {
+  width: 7rem;
+}
+.globalcss .group__grid, .globalcss .group__grid--resize {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, auto);
+}
+.globalcss .group__grid--resize {
+  grid-template-columns: repeat(3, 25%);
+}/*# sourceMappingURL=styles.css.map */

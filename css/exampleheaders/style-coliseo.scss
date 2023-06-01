@@ -16,10 +16,24 @@ $page : "coliseosport";//default-light || default-dark
             & i{
                 margin-right: 0.25rem;
             }
-        }
+            font-weight: 500;
+        }   
         &.login{
+            @include borderSquareAnimated(#3a1875,#d53a9d,#3a86ff,1);
             background-color: $bgc-primary;
             text-transform: uppercase;
         }
+        &.singup{
+            background-color: #fff;
+            color: inherit;
+            border: none;
+            text-transform: inherit;
+            &:hover{
+                background-color: #fff;
+                color: inherit;
+            }
+        }
     }
+     //animaciones
+     @include animation-borderSquare();
 }

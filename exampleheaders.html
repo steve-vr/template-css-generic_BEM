@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
-    <link rel="stylesheet" href="css/exampleheaders/style-coliseo.css">
+    <!--ORDEN JERARQUICO-->
     <link rel="stylesheet" href="css/exampleheaders/style-latinosbet.css">
+    <link rel="stylesheet" href="css/exampleheaders/style-coliseo.css">
     <link rel="stylesheet" href="css/exampleheaders/style-bitstarz.css">
     <link rel="stylesheet" href="css/exampleheaders/style-goldenbet.css">
     <link rel="stylesheet" href="css/exampleheaders/style-lajoya.css">
@@ -16,13 +17,7 @@
 
     <div id="app">
         <h1>SE PUEDEN COLOCAR UNO DENTRO DE OTRO SIN QUE ESTE AFECTE SU CSS INTERNO</h1>
-        <div class="coliseosport">
-            <header class="header">
-                <img class="header__logo" src="https://coliseosport.com/img/logo.png" alt="">
-                <button class="btn login"><i class="fas fa-sign-in-alt"></i>Entrar</button>
-                <button class="btn singup"><i class="fas fa-user"></i>Registrar</button>
-            </header>
-        </div>
+     
         <br>
         <div class="latinosbet">
             <header class="header">
@@ -33,11 +28,19 @@
                     <a class="link">Casino</a>
                     <a class="link">Casino en Vivo</a>
                     <a class="link">Juegos Virtuales</a>
-                    <a class="link">Aviator</a>
-                    <a class="link">Carreras Hípicas</a>
+                    <!--a class="link">Aviator</a>
+                    <a class="link">Carreras Hípicas</a-->
                 </div>
                 <button class="btn login">Acceso</button>
                 <button class="btn singup">Registrar</button>
+            </header>
+        </div>
+        <br>
+        <div class="coliseosport">
+            <header class="header">
+                <img class="header__logo" src="https://coliseosport.com/img/logo.png" alt="">
+                <button class="btn login"><span></span><span></span><span></span><span></span>Entrar</button>
+                <button class="btn singup"><i class="fas fa-user"></i>Registrar</button>
             </header>
         </div>
         <br>
@@ -52,6 +55,8 @@
                 <button class="btn singup">Sing up</button>
             </header>
         </div>
+
+       
         <br>
         <div class="goldenbet">
             <header class="header">

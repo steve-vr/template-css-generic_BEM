@@ -136,13 +136,20 @@
 }
 .bitstarz .btn.login {
   background-color: #2b2740;
+  color: inherit;
 }
 .bitstarz .btn.singup {
   background-color: #0dd182;
+  color: inherit;
+  border: none;
+}
+.bitstarz .btn.singup:hover {
+  background-color: #0dd182;
+  color: inherit;
 }
 .bitstarz .ipt.search {
   background-color: #1b1928;
-  width: 25rem;
+  max-width: 25rem;
   color: inherit;
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7' fill='none' stroke='%23d3d7db' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23d3d7db' stroke-width='2'/></svg>");
   background-repeat: no-repeat;

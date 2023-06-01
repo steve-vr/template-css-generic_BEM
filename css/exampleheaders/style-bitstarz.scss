@@ -21,9 +21,16 @@ $page : "bitstarz";//default-light || default-dark
         }
         &.login{
             background-color: #2b2740;
+            color: inherit;
         }
         &.singup{
             background-color: #0dd182;
+            color: inherit;
+            border: none;
+            &:hover{
+                background-color: #0dd182;
+                color: inherit;
+            }
         }
     }
     .ipt{

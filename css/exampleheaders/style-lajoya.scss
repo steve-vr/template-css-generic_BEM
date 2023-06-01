@@ -15,12 +15,19 @@ $borderR-btn   : 0;
     .btn{
         &.login,&.singup{
             font-weight: 600;
+            color: inherit
         }
         &.login{
             @include borderSquareAnimated(#3a1875,#d53a9d,#3a86ff,1);
         }
         &.singup{
             background-color: #138d75;
+            border: none;
+            &:hover{
+                background-color: #138d75;
+                border: none;
+                color: inherit
+            }
         }
     }
     //animaciones

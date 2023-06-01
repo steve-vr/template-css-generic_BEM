@@ -51,7 +51,6 @@
     }
     @else if($page == "latinosbet"){ 
         grid-template-columns: auto 1fr 7rem 7rem;
-        justify-items: center; 
     }
     @else if($page == "bitstarz"){ 
         grid-template-columns: 40px $widht-logo 1fr 7rem 7rem;
@@ -81,7 +80,7 @@
 @mixin searchHeader($bgc,$color, $widht-ipt){//, $icon-color- au  no creo
     &.search{
         background-color: $bgc;
-        width: $widht-ipt;
+        max-width: $widht-ipt;
         color: $color;
         background-image: url("#{$lens}");
         background-repeat: no-repeat;
