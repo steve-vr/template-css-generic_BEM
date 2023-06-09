@@ -88,3 +88,4 @@ La propiedad disabled se puede utilizar en varias etiquetas HTML para deshabilit
       color: $color-disabled;
       background-color : $bgc-disabled;  
 ```
+-!!!PROHIBIDO USAR HEIGHT: autowellfix, EN SAGARIA TOMA EL TAMAÑO TOTAL
