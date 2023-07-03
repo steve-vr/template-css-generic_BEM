@@ -1,0 +1,39 @@
+$body  : ".goldenbet"; //nombre de la pagina
+$page : "goldenbet";//default-light || default-dark
+@import '../../components/variables';
+@import '../../components/global';
+@import "../../components/mixins";
+@import '../../components/placeholder-selectors';
+
+
+#{$body}{
+    .header{
+        @include structureHeader($page,5rem);
+        &__menu{
+            @include dropdown-menu("normal");
+        }
+        &__logo{
+            width: 5rem;
+        }
+    }
+    .btn{
+        &.login,&.singup{
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        &.login{
+            background-color: #e8c934;
+            box-shadow: 0 0 6px rgba(255,220,129,.6), inset 0 -6px 10px rgba(242,156,27,.8), inset 0 6px 10px hsla(0,0%,100%,.45), inset 0 0 11px rgba(255,92,0,.25);
+        }
+        &.singup{
+            background-color: #004a14;
+            &:hover{
+                background-color: #004a14;
+
+            }
+        }
+    }
+    .ipt{
+        @include searchHeader(#1b1928,inherit,25rem);
+    }
+}

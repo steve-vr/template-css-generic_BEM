@@ -33,8 +33,6 @@
 }
 
 .globalcss .slc, .globalcss .btn {
-  background-color: rgb(0 0 0 / 95%);
-  color: #85ff00;
   cursor: pointer;
   font-size: inherit;
   width: 100%;

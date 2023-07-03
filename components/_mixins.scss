@@ -56,7 +56,7 @@
         grid-template-columns: 40px $widht-logo 1fr 7rem 7rem;
     }
     @else if($page == "goldenbet"){ 
-        grid-template-columns: 40px $widht-logo 1fr 12rem 12rem 8rem 8rem;
+        grid-template-columns: 40px $widht-logo 1fr 6rem 6rem;
     }
     align-items: center;
     height: 4rem;
