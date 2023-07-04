@@ -22,10 +22,15 @@ $g-font        : system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
 $g-font-size   : 14px;
 $g-hover       : brightness(.9);
 $g-disabled    : brightness(.7);
-$size-web      : 1200px;
+$size-web      : 1023px; //table-mobile
+$height-header : 4rem;
 
 $bgc-header: null;
 $bgc-primary: null;
+
+
+//modal
+$bg-modal : #000;
 
 
 //@if($theme == "light" and $g-color == null){
@@ -102,10 +107,21 @@ $bgc-primary: null;
     $bgc-header: #000;
     $bgc-primary: #f54b00;
 }
+@if($page == "goldenbet"){
+    //$g-color : #fff;
+    $color-primary : #edce34;
+    $icon-color : 'fff';
+    $bgc-ipt: #ffF;
+    //$bgc-body :#1c2226;
+    //$bgc-body :#313233;
+    //$bgc-header: #000;
+    //$bgc-primary: #f54b00;
+}
 
 //podemos ponder los botones de login y singup como variables y dentro de esta declarar lo colore el borde etc, mas rapido saldria, al igual que con el logo
 //las caracterisitcas que encsita y que se mueva por eoss micro compnenetes por haci decirlo
 
 $arrow-down:"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23#{$icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e";
 $lens:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7' fill='none' stroke='%23#{$icon-color}' stroke-width='2'/><line x1='20' y1='23' x2='15' y2='17' stroke='%23#{$icon-color}' stroke-width='2'/></svg>";
-$lock:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%23#{$icon-color}' d='M25 12h-1v-3.816c0-4.589-3.32-8.184-8.037-8.184-4.736 0-7.963 3.671-7.963 8.184v3.816h-1c-2.206 0-4 1.794-4 4v12c0 2.206 1.794 4 4 4h18c2.206 0 4-1.794 4-4v-12c0-2.206-1.794-4-4-4zM10 8.184c0-3.409 2.33-6.184 5.963-6.184 3.596 0 6.037 2.716 6.037 6.184v3.816h-12v-3.816zM27 28c0 1.102-0.898 2-2 2h-18c-1.103 0-2-0.898-2-2v-12c0-1.102 0.897-2 2-2h18c1.102 0 2 0.898 2 2v12zM16 18c-1.104 0-2 0.895-2 2 0 0.738 0.405 1.376 1 1.723v3.277c0 0.552 0.448 1 1 1s1-0.448 1-1v-3.277c0.595-0.346 1-0.985 1-1.723 0-1.105-0.895-2-2-2z'/></svg>"
+$lock:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%23#{$icon-color}' d='M25 12h-1v-3.816c0-4.589-3.32-8.184-8.037-8.184-4.736 0-7.963 3.671-7.963 8.184v3.816h-1c-2.206 0-4 1.794-4 4v12c0 2.206 1.794 4 4 4h18c2.206 0 4-1.794 4-4v-12c0-2.206-1.794-4-4-4zM10 8.184c0-3.409 2.33-6.184 5.963-6.184 3.596 0 6.037 2.716 6.037 6.184v3.816h-12v-3.816zM27 28c0 1.102-0.898 2-2 2h-18c-1.103 0-2-0.898-2-2v-12c0-1.102 0.897-2 2-2h18c1.102 0 2 0.898 2 2v12zM16 18c-1.104 0-2 0.895-2 2 0 0.738 0.405 1.376 1 1.723v3.277c0 0.552 0.448 1 1 1s1-0.448 1-1v-3.277c0.595-0.346 1-0.985 1-1.723 0-1.105-0.895-2-2-2z'/></svg>";
+$close:"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'  fill='%23#{$icon-color}' %3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e";

@@ -59,7 +59,7 @@
         grid-template-columns: 40px $widht-logo 1fr 6rem 6rem;
     }
     align-items: center;
-    height: 4rem;
+    height: $height-header;
     padding: 0 0.5rem;
     gap: 0.5rem;
     background-color: $bgc-header;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>Goldenbet</title>
     <link rel="stylesheet" href="./css/cssSvelt/main.css">
 </head>
@@ -12,14 +13,40 @@
             <button class="btn header__menu" :class="{ 'is-open': btnmenuBitstarz }" @click="menuBitstarz"><span></span></button>
             <img class="header__logo" src="https://d2zzz5z45zl95g.cloudfront.net/golden/logo.svg" alt="">
             <div></div>
-            <button class="btn login">Acceso</button>
+            <button class="btn login" data-bs-toggle="modal" data-bs-target="#login_1">Acceso</button>
             <button class="btn singup">Registro</button>
         </header>
+
+  <!-- Modal -->
+  <div class="modal fade thm__login--gldb" id="login_1">
+    <div class="modal-dialog centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div></div>
+          <button class="btn close" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="modal__img">
+                <img src="https://d2zzz5z45zl95g.cloudfront.net/golden/logo.svg" alt="">
+            </div>
+            <div class="modal__tittle">Bienvenido a <span> Goldenbet</span></div>
+            <div class="modal__container--inputs">
+                <input type="text" class="ipt" placeholder="Usuario">
+                <input type="password" class="ipt" placeholder="Contraseña">
+                <button class="btn singup">Ingresar</button>
+                <div class="modal__forgetpass">¿Olvidaste tu contraseña?</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <!-- production version, optimized for size and speed -->
 <!--script src="https://cdn.jsdelivr.net/npm/vue@2"></script-->
 <script>
+
     var app = new Vue({
         el: '#app',
         data: {
@@ -32,8 +59,7 @@
             }
         },
         mounted() {
-            const detectDevice = /Mobi/.test(navigator.userAgent) || screen.innerWidth <= 1200;
-
+            const detectDevice = /Mobi/.test(navigator.userAgent) || screen.innerWidth <= 1023;//tablet - celular 
             detectDevice?this.device = 'mb':this.device = 'wb';
             console.log(this.device);
         }

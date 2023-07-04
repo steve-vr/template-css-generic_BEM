@@ -17,6 +17,15 @@
     background-color: $bgc-body;
     .btn{
         @extend %button;
+        //for modal
+        &.close {
+            width: #{$g-font-size + 4};
+            height: #{$g-font-size + 4};
+            background: transparent;
+            padding: 0;
+            background-image: url("#{$close}");
+            background-repeat: no-repeat;
+        }
     }
     .slc{
         @extend %select;
@@ -89,3 +98,83 @@
 //        color: #999
 //    }
 //}
+
+//MODAL GLOBAL
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+      &-dialog {
+          position: relative;
+          max-width: 550px;
+          margin: $height-header auto;
+          pointer-events: none;
+      }
+      &.fade &-dialog{
+          transition: transform .3s ease-out;
+          transform: translate(0,-50px);
+      }
+      &.show &-dialog{
+          transform: none;
+      }
+      & .centered{
+        min-height: calc(100% - #{$height-header * 2});
+        display: flex;
+        align-items: center;
+      }
+      &-content {
+          pointer-events: auto;
+          background: $bg-modal;
+          border-radius: 0.3rem;
+          width: 100%;
+      }
+      &-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-transform:uppercase;
+          /*border-bottom: 1px solid #6d6d6d;
+          o border:none;
+          */
+
+          padding: 1rem;
+          font-size: 18px;
+          font-weight: 500;
+      }
+      &-body{
+          display: grid;
+          gap: 0.5rem;
+          padding: 1rem;
+      }
+      &-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1050;
+          width: 100vw;
+          height: 100vh;
+          background-color: #000;
+          &.fade{
+              opacity: 0;
+          }
+          &.show {
+              opacity: .5;
+          }
+      }
+}
+  
+.fade {
+    transition: opacity .15s linear;
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+
+//INPUT

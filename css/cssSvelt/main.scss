@@ -4,16 +4,70 @@ $page : "goldenbet";//default-light || default-dark
 @import '../../components/global';
 @import "../../components/mixins";
 @import '../../components/placeholder-selectors';
+//@import SELECCIONAS EL TIPO DE THEMA DE LOGIN QUE QUIERES AQUI
 
+
+.thm{
+    &__login{
+        &--gldb{
+            .ipt{
+                color: #000;
+            }
+            & .modal{
+                &-dialog{
+                    max-width: 360px;//este valor se puede moldear capazs
+                }
+                &-content{
+                    border: 1px solid $color-primary;
+                }
+                &-header{
+                    padding-bottom: 0;
+                }
+                &-body{
+                    padding-top: 0;
+                }
+                &__img{
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        padding: 0 2rem;
+                        width: auto;
+                    }
+                }
+                &__container{
+                    &--inputs{
+                        display: grid;
+                        gap: 0.75rem;
+                        padding: 1rem 2rem;
+                        justify-items: end;
+                    }
+                }
+                &__tittle{
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.25rem;
+                    span{
+                        color: $color-primary;
+                    }
+                }
+                &__forgetpass{
+                    cursor: pointer;
+                    padding: 0.25rem 0;
+                    &:hover{
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
 
 #{$body}{
+    //@extend "EL TIPO DE LOGIN QUE TENDRA QUI SE AGREGA"
     .header{
-        @include structureHeader($page,5rem);
+        @include structureHeader($page,5.5rem);
         &__menu{
             @include dropdown-menu("normal");
-        }
-        &__logo{
-            width: 5rem;
         }
     }
     .btn{
@@ -22,18 +76,14 @@ $page : "goldenbet";//default-light || default-dark
             font-weight: 600;
         }
         &.login{
-            background-color: #e8c934;
-            box-shadow: 0 0 6px rgba(255,220,129,.6), inset 0 -6px 10px rgba(242,156,27,.8), inset 0 6px 10px hsla(0,0%,100%,.45), inset 0 0 11px rgba(255,92,0,.25);
+            background-color: #423b62;
         }
         &.singup{
-            background-color: #004a14;
-            &:hover{
-                background-color: #004a14;
-
-            }
+            background-color: $color-primary;
+            box-shadow: 0 0 6px rgba(255,220,129,.6), inset 0 -6px 10px rgba(242,156,27,.8), inset 0 6px 10px hsla(0,0%,100%,.45), inset 0 0 11px rgba(255,92,0,.25);
         }
     }
-    .ipt{
-        @include searchHeader(#1b1928,inherit,25rem);
-    }
+
+
+
 }
