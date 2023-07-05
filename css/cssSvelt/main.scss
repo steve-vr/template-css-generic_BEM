@@ -1,11 +1,13 @@
 $body  : ".goldenbet"; //nombre de la pagina
 $page : "goldenbet";//default-light || default-dark
+$bgi-signup: "https://www.apuestatotal.com/_next/static/media/Land_Logo.230d5036.jpg";
 @import '../../components/variables';
 @import '../../components/global';
 @import "../../components/mixins";
 @import '../../components/placeholder-selectors';
+@import '../../components/functions';
 //@import SELECCIONAS EL TIPO DE THEMA DE LOGIN QUE QUIERES AQUI
-
+$portrait_size_tablet: "(orientation: portrait) and (min-width: 765px) and (max-width: 825px)";
 
 .thm{
     &__login{
@@ -24,21 +26,19 @@ $page : "goldenbet";//default-light || default-dark
                     padding-bottom: 0;
                 }
                 &-body{
-                    padding-top: 0;
+                    padding: 0 4.5rem 2rem;
+                    gap: 1rem;
                 }
-                &__img{
-                    display: flex;
-                    justify-content: center;
-                    img {
-                        padding: 0 2rem;
-                        width: auto;
-                    }
+            }
+            & .login{
+                &__logo{
+                    width: auto;
+                    margin: 0 auto;
                 }
                 &__container{
                     &--inputs{
                         display: grid;
                         gap: 0.75rem;
-                        padding: 1rem 2rem;
                         justify-items: end;
                     }
                 }
@@ -60,7 +60,100 @@ $page : "goldenbet";//default-light || default-dark
             }
         }
     }
+    &__singup{
+        &--apt{
+            &.modal{
+                background: url(#{$bgi-signup}) 0% 0% / cover no-repeat;
+                background-color: #000;
+            }
+            & .modal{
+                &-dialog {
+                    max-width: 100%;
+                    margin: 4rem 0;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    justify-items: center;
+                }
+                &-content{
+                    max-width: 420px;
+                }
+                //@include "modall mobile"
+                @media (max-width: $size-web) {
+                    &-dialog {
+                            margin: 0;
+                            grid-template-columns: auto;
+                    }
+                    //@include "modall mobile fullscreen"
+                    &-content{
+                        border-radius: 0;
+                        height: 100vh;
+                        overflow: auto;
+                        max-width: 100%;
+                    }
+                }
+                //portrait_size_tablet
+                @media #{$portrait_size_tablet} {
+                    &-header{
+                        background: #4a4a4a;
+                    }
+                    &-body{
+                        padding: 2rem 8rem; 
+                    }
+                }
+            }
+
+            & .singup{
+                &__form{
+                    display: grid;
+                    gap: 0.85rem;
+                    &--sms{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        gap: 0.35rem;
+                    }
+                    &--phone{
+                        display: grid;
+                        grid-template-columns: 4rem 1fr;
+                        & .slc{
+                            border-radius: $borderR-btn 0 0 $borderR-btn;
+                            padding-right: 0.25rem;
+                            background-color: #e5e5e5;
+                        }
+                        & .ipt{
+                            border-radius: 0 $borderR-btn $borderR-btn 0;
+                            padding-left: 0.25rem;
+                        }
+                    }
+                    &--date{
+                        display: grid;  
+                        grid-template-columns: 1fr 1fr 1fr;
+                        gap: 0.35rem;
+                    }
+                    &--conditions{
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        align-items: center;
+                        gap: 0.75rem;
+                        @include animateCheckBox_1(#34b93d,grey,20px,.4s);
+                    }
+                }
+
+            }
+            & .btn{
+                &.validsms{
+                    background: #2783ff;
+                }
+                &.singup{
+                    height: $ipt-height;
+                }
+            }
+            & .link{
+                color: $color-primary;
+            }
+        }
+    }
 }
+
 
 #{$body}{
     //@extend "EL TIPO DE LOGIN QUE TENDRA QUI SE AGREGA"
@@ -80,10 +173,9 @@ $page : "goldenbet";//default-light || default-dark
         }
         &.singup{
             background-color: $color-primary;
-            box-shadow: 0 0 6px rgba(255,220,129,.6), inset 0 -6px 10px rgba(242,156,27,.8), inset 0 6px 10px hsla(0,0%,100%,.45), inset 0 0 11px rgba(255,92,0,.25);
+            box-shadow: 0 0 6px $color-primary, 
+            inset 0 -6px 10px $color-primary, inset 0 6px 10px hsla(0,0%,100%,.45), 
+            inset 0 0 11px $color-primary;
         }
     }
-
-
-
 }

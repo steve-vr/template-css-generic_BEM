@@ -14,33 +14,88 @@
             <img class="header__logo" src="https://d2zzz5z45zl95g.cloudfront.net/golden/logo.svg" alt="">
             <div></div>
             <button class="btn login" data-bs-toggle="modal" data-bs-target="#login_1">Acceso</button>
-            <button class="btn singup">Registro</button>
+            <button class="btn singup" data-bs-toggle="modal" data-bs-target="#singup_1">Registro</button>
         </header>
 
-  <!-- Modal -->
-  <div class="modal fade thm__login--gldb" id="login_1">
-    <div class="modal-dialog centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div></div>
-          <button class="btn close" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
-        </div>
-        <div class="modal-body">
-            <div class="modal__img">
-                <img src="https://d2zzz5z45zl95g.cloudfront.net/golden/logo.svg" alt="">
+        <!-- Modal -->
+        <div class="modal fade thm__login--gldb" id="login_1">
+            <div class="modal-dialog centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <div></div>
+                    <button class="btn close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="login__logo" src="https://d2zzz5z45zl95g.cloudfront.net/golden/logo.svg" alt="">
+                        <div class="login__tittle">Bienvenido a <span> Goldenbet</span></div>
+                        <div class="login__container--inputs">
+                            <input type="text" class="ipt" placeholder="Usuario">
+                            <input type="password" class="ipt" placeholder="Contraseña">
+                            <button class="btn singup">Ingresar</button>
+                            <div class="login__forgetpass">¿Olvidaste tu contraseña?</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal__tittle">Bienvenido a <span> Goldenbet</span></div>
-            <div class="modal__container--inputs">
-                <input type="text" class="ipt" placeholder="Usuario">
-                <input type="password" class="ipt" placeholder="Contraseña">
-                <button class="btn singup">Ingresar</button>
-                <div class="modal__forgetpass">¿Olvidaste tu contraseña?</div>
+        </div>
+
+        <div class="modal fade thm__singup--apt" id="singup_1">
+            <div class="modal-dialog centered">
+                <div></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>Regístrate aquí</div>
+                        <button class="btn close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body singup__form">
+                        <input type="text" class="ipt" placeholder="Nombres y apellidos" autocomplete="off">
+                        <div>
+                            <div>Fecha de nacimiento</div>
+                            <div class="singup__form--date">
+                                <select class="slc"><option value="" selected disabled>dd</option></select>
+                                <select class="slc"><option value="" selected disabled>mm</option></select>
+                                <select class="slc"><option value="" selected disabled>yyyy</option></select>
+                            </div>
+                        </div>
+                        <input type="email" class="ipt" placeholder="Correo electrónico" autocomplete="off">
+                        <select class="slc">
+                            <option value="" selected disabled>Seleccionar moneda</option>
+                            <option value="">USD</option>
+                            <option value="">PEN</option>
+                        </select>
+                        <input type="text" class="ipt" placeholder="Nombre de usuario" autocomplete="off">
+                        <input type="password" class="ipt" placeholder="Contraseña" autocomplete="off">
+                        <input type="password" class="ipt" placeholder="Confirmar contraseña" autocomplete="off">
+                        <div class="singup__form--phone">
+                            <select class="slc">
+                                <option value="">+751</option>
+                                <option value="">+1</option>
+                                <option value="">+52</option>
+                                <option value="">+73</option>
+                            </select>
+                            <input type="number" class="ipt" min="0" max="999999999" placeholder="Teléfono" autocomplete="off">
+                        </div>
+                        <div class="singup__form--sms">
+                            <button class="btn validsms">Generar código SMS</button>
+                            <input type="number" class="ipt" min="0" max="99999" placeholder="Código" autocomplete="off">
+                        </div>
+                        <div class="singup__form--conditions">   
+                            <input type="checkbox" id="chk_conditions"/>
+                            <label for="chk_conditions"></label> 
+                            <div>Soy mayor de 18 años y estoy de acuerdo con las <b><a class="link" href="#">Políticas de Privacidad</a></b> de Goldenbet.</div>
+                        </div>
+                        <div></div>
+                        <button class="btn singup">Registrar</button>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
+        
     </div>
-  </div>
-    </div>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <!-- production version, optimized for size and speed -->

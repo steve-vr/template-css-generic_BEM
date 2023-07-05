@@ -144,18 +144,25 @@
 %select{
     @extend %button;
     background-image: url("#{$arrow-down}");
+    color: $color-ipt;
+    height: $ipt-height;
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
-    background-size: #{$g-font-size} #{$g-font-size}; 
+    background-size: #{$g-font-size - 2} #{$g-font-size - 2}; 
     -webkit-appearance: none; // Quita la apariencia predeterminada en Safari 
     -moz-appearance: none; //  Quita la apariencia predeterminada en Firefox 
     appearance: none; //  Quita la apariencia predeterminada en otros navegadores
+    & > *{
+        color: $color-ipt;
+    }
 }
 
 %input{
     font-size: inherit;
     border: #{$border-btn};
     background-color: $bgc-ipt;
+    color: $color-ipt;
+    height: $ipt-height;
     width: 100%;
     border-radius: #{$borderR-btn};
     padding: 0.5rem;
