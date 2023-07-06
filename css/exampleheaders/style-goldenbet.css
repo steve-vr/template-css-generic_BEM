@@ -19,7 +19,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .goldenbet {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 14px;
-  background-color: #313233;
 }
 .goldenbet * {
   color: #fff;
@@ -77,16 +76,13 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   width: 100%;
 }
 .modal-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 18px;
   align-items: center;
-  justify-content: space-between;
   text-transform: uppercase;
-  /*border-bottom: 1px solid #6d6d6d;
-  o border:none;
-  */
   padding: 1rem;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .modal-body {
   display: grid;
@@ -117,6 +113,38 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   opacity: 0;
 }
 
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  z-index: 1056;
+  display: none;
+  min-width: 100%;
+  margin: 0;
+  text-align: left;
+  list-style: none;
+  background: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+}
+.dropdown-menu.show {
+  display: block;
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
 .goldenbet .slc:hover, .goldenbet .btn:hover {
   filter: brightness(0.9);
 }
@@ -139,6 +167,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   color: #000;
   height: 40px;
+  text-align: start;
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
   background-size: 12px 12px;
@@ -166,10 +195,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border: 1px solid transparent;
 }
 .goldenbet .ipt::-moz-placeholder {
-  color: #757575;
+  color: #000;
 }
 .goldenbet .ipt::placeholder {
-  color: #757575;
+  color: #000;
 }
 
 .goldenbet .link {

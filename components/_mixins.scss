@@ -191,17 +191,17 @@
     /* Checkmark style starts */
     @-moz-keyframes dothabottomcheck{
         0% { height: 0; }
-        100% { height: $checkbox-height/2; }
+        100% { height: calc($checkbox-height/2); }
     }
 
     @-webkit-keyframes dothabottomcheck{
         0% { height: 0; }
-        100% { height: $checkbox-height/2; }
+        100% { height: calc($checkbox-height/2); }
     }
 
     @keyframes dothabottomcheck{
         0% { height: 0; }
-        100% { height: $checkbox-height/2;  }
+        100% { height: calc($checkbox-height/2);  }
     }
 
     @keyframes dothatopcheck{
@@ -235,10 +235,10 @@
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        -moz-transition: border-color ease $duration/2;
-        -o-transition: border-color ease $duration/2;
-        -webkit-transition: border-color ease $duration/2;
-        transition: border-color ease $duration/2;
+        -moz-transition: border-color ease calc($duration/2);
+        -o-transition: border-color ease calc($duration/2);
+        -webkit-transition: border-color ease calc($duration/2);
+        transition: border-color ease calc($duration/2);
         cursor:pointer;
 
         &::before, &::after {
@@ -290,10 +290,10 @@
         
         &::after{
             height: $checkbox-height * .5;
-            -moz-animation: dothabottomcheck $duration/2 ease 0s forwards;
-            -o-animation: dothabottomcheck $duration/2 ease 0s forwards;
-            -webkit-animation: dothabottomcheck $duration/2 ease 0s forwards;
-            animation: dothabottomcheck $duration/2 ease 0s forwards;
+            -moz-animation: dothabottomcheck calc($duration/2) ease 0s forwards;
+            -o-animation: dothabottomcheck calc($duration/2) ease 0s forwards;
+            -webkit-animation: dothabottomcheck calc($duration/2) ease 0s forwards;
+            animation: dothabottomcheck calc($duration/2) ease 0s forwards;
         }
         
         &::before{

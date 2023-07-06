@@ -44,6 +44,7 @@
                 <div></div>
                 <div class="modal-content">
                     <div class="modal-header">
+                        <div></div>
                         <div>Regístrate aquí</div>
                         <button class="btn close" data-bs-dismiss="modal"></button>
                     </div>
@@ -66,13 +67,16 @@
                         <input type="text" class="ipt" placeholder="Nombre de usuario" autocomplete="off">
                         <input type="password" class="ipt" placeholder="Contraseña" autocomplete="off">
                         <input type="password" class="ipt" placeholder="Confirmar contraseña" autocomplete="off">
-                        <div class="singup__form--phone">
-                            <select class="slc">
-                                <option value="">+751</option>
-                                <option value="">+1</option>
-                                <option value="">+52</option>
-                                <option value="">+73</option>
-                            </select>
+                        <div class="singup__form--phone">                            
+                            <div class="dropdown">
+                                <button class="slc singup__form--prefix" data-bs-toggle="dropdown">{{ selectedOption.value }} <img :src="selectedOption.country" alt=""></button>
+                                <div class="dropdown-menu">
+                                    
+                                    <div  v-for="option in options" :key="option.value" class="singup__form--prefix" @click="selectOption(option)">{{ option.value }} <img :src="option.country" alt=""></div>
+                                   
+                                </div>
+                            </div>
+                        
                             <input type="number" class="ipt" min="0" max="999999999" placeholder="Teléfono" autocomplete="off">
                         </div>
                         <div class="singup__form--sms">
@@ -90,14 +94,13 @@
                 </div>
             </div>
         </div>
-        
     </div>
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- production version, optimized for size and speed -->
 <!--script src="https://cdn.jsdelivr.net/npm/vue@2"></script-->
 <script>
@@ -106,12 +109,20 @@
         el: '#app',
         data: {
             device:'',
-            btnmenuBitstarz: false
+            btnmenuBitstarz: false,
+            options: [
+                { value: '+51', country: 'https://d2zzz5z45zl95g.cloudfront.net/us_img_country_flags/flag_PE.jpg' },
+                { value: '+1', country: 'https://d2zzz5z45zl95g.cloudfront.net/us_img_country_flags/flag_US.jpg' },
+            ],
+            selectedOption: {value: '+51', country: 'https://d2zzz5z45zl95g.cloudfront.net/us_img_country_flags/flag_PE.jpg' }
         },
         methods:{
             menuBitstarz(){
                 this.btnmenuBitstarz = !this.btnmenuBitstarz;
-            }
+            },
+            selectOption(option) {
+                this.selectedOption = option;
+            },
         },
         mounted() {
             const detectDevice = /Mobi/.test(navigator.userAgent) || screen.innerWidth <= 1023;//tablet - celular 

@@ -151,17 +151,13 @@ input{
           width: 100%;
       }
       &-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          text-transform:uppercase;
-          /*border-bottom: 1px solid #6d6d6d;
-          o border:none;
-          */
-
-          padding: 1rem;
-          font-size: 18px;
-          font-weight: 500;
+        display: grid;
+        grid-template-columns: 1fr #{$g-font-size + 4};
+        align-items: center;
+        text-transform: uppercase;
+        padding: 1rem;
+        font-size: #{$g-font-size + 4};
+        font-weight: 700;
       }
       &-body{
           display: grid;
@@ -192,4 +188,35 @@ input{
     opacity: 0;
 }
 
-//INPUT
+//DROPDOWN - UNO PUEDE PERSONZALIZAR EL COLO OJITO- PERO FALTA HACER ESTO
+.dropdown{
+    position: relative;
+    &-menu {
+        position: absolute;
+        z-index: 1056;
+        display: none;
+        min-width: 100%;
+        margin: 0;
+        text-align: left;
+        list-style: none;
+        background: $bg-dropdown;
+        background-clip: padding-box;
+        border-radius: 0.25rem;
+        &.show {
+            display: block;
+        }
+    }
+    &-item {
+        display: block;
+        width: 100%;
+        padding: 0.25rem 1rem;
+        clear: both;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+}
